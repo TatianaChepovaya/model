@@ -392,6 +392,13 @@ header {
    border: 0;
    margin-bottom: 15px;
   }
+  .objective__left-parl .main__btn:hover,
+  .objective__left-parl .main__btn:focus,
+  .objective__right-parl .main__btn:hover,
+  .objective__right-parl .main__btn:focus
+    {
+  border: none;
+  }
   .objective__line{
     display: block;
     width: 250px;
@@ -455,7 +462,9 @@ header {
   .findmodel__wrap,
   .joinmodel__wrap {
     display: flex;
-  }
+    justify-content: space-between;
+    align-items: center;
+}
   .joinmodel__wrap {
     flex-direction: row-reverse;
   }
