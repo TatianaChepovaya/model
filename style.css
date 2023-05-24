@@ -936,7 +936,7 @@ footer {
 }
 .skills__cards {
   display: grid;
-  grid-template-columns: minmax(0, 290px);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -960,17 +960,20 @@ footer {
 .skills__card-services {
   display: grid;
   align-items: center;
-  grid-template-columns: 85px minmax(0, 1fr);
-  column-gap: 5%;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2%;
   margin-bottom: 10px;
 }
 .skills__card-services p {
   font-size: 11px;
+  text-align: left;
+  margin-bottom: 0;
 }
 .skills__card-sevices-description {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
   font-size: 11px;
 }
 .skills__card-services-description-part {
@@ -1074,6 +1077,12 @@ a.with-news::after {
 
   .skills__cards {
     grid-template-columns: repeat(2, 290px);
+  }
+
+  .skills__button {
+    width: 600px;
+    margin-right: auto;
+    text-align: right;
   }
 }
 
