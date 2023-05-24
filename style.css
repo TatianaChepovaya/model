@@ -813,10 +813,6 @@ footer {
   margin-bottom: 30px;
 }
 
-.account__container {
-  padding-right: 35px;
-  padding-left: 35px;
-}
 .title--account {
   margin-bottom: 15px;
 }
@@ -824,7 +820,7 @@ footer {
   margin-bottom: 20px;
   text-align: center;
 }
-.account-navigation {
+.navigation {
   display: none;
 }
 .account__label-wrapper {
@@ -1011,9 +1007,10 @@ footer {
   color: var(--main-grey-color);
   font-size: 11px;
 }
-.skills__add {
+.add {
   display: block;
   width: 130px;
+  height: 30px;
   padding: 7px;
   margin: 0 auto;
   border: none;
@@ -1090,19 +1087,19 @@ a.with-news::after {
   main {
     min-height: calc(100vh - 335px);
   }
-  .account-main-content {
+  .main-content {
     display: flex;
     justify-content: space-between;
   }
 
-  .account-navigation {
+  .navigation {
     display: block;
     margin-right: 35px;
   }
-  .account-navigation-list ul {
+  .navigation-list ul {
     list-style: none;
   }
-  .account-navigation-list li {
+  .navigation-list li {
     width: 200px;
     height: 30px;
     margin-bottom: 20px;
@@ -1111,14 +1108,14 @@ a.with-news::after {
     justify-content: flex-start;
     border: solid 1px var(--main-grey-color);
   }
-  .account-navigation-list li.current {
+  .navigation-list li.current {
     background-color: var(--main-grey-color);
     color: #ffffff;
   }
-  .account-navigation-list li:last-child {
+  .navigation-list li:last-child {
     margin-bottom: 0;
   }
-  .account-navigation-list a:first-child {
+  .navigation-list a:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1126,7 +1123,7 @@ a.with-news::after {
     width: 30px;
     background-color: var(--main-grey-color);
   }
-  .account-navigation-list a:last-child {
+  .navigation-list a:last-child {
     padding: 5px 10px;
     font-weight: 700;
   }
@@ -1235,5 +1232,59 @@ a.with-news::after {
     display: none;
   }
 }
-
 /*#endregion personalAccount*/
+
+/*#region services*/
+.title--services {
+  margin-bottom: 35px;
+}
+.services__items {
+  width: 100%;
+}
+
+.services {
+  min-height: calc(100vh - 110px);
+}
+
+.services__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 7px 10px;
+  background-color: var(--light-grey-color);
+  border-radius: 4px;
+}
+.services__item:last-of-type {
+  margin-bottom: 30px;
+}
+.services__item-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+.services__item-counter p {
+  line-height: 13px;
+}
+.services__item-counter.empty {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .services {
+    min-height: calc(100vh - 145px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .services {
+    min-height: calc(100vh - 355px);
+  }
+}
+/*#endregion services*/
+
+

@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal account</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css" />
-  <script
-    type="text/javascript"
-    src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"
-  ></script>
-  <script src="./menu-mob.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"
+    ></script>
+    <script src="./menu-mob.js"></script>
+  </head>
 <body>
   <header class="header--white">
     <div class="container header__container header__container--account">
@@ -92,36 +92,31 @@
     </div>
   </header>
   <main>
-    <section class="section account">
-      <div class="container">
-        <h2 class="title title--account">
-          Це ваш кабінет
+    <section class="section services">
+      <div class="container services__container">
+        <h2 class="title title--account title--services">
+          Послуги
         </h2>
-        <p>
-          <em>
-            Заповніть особисті дані та розпочинайте пошук
-          </em>
-        </p>
         <div class="main-content">
           <nav class="navigation">
             <ul class="navigation-list">
-              <li class="current">
-                <a href="#">
+              <li>
+                <a href="./personal__account.html">
                   <svg width="24" height="24" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 6C11.4696 6 10.9609 6.21071 10.5858 6.58579C10.2107 6.96086 10 7.46957 10 8C10 8.53043 10.2107 9.03914 10.5858 9.41421C10.9609 9.78929 11.4696 10 12 10C12.5304 10 13.0391 9.78929 13.4142 9.41421C13.7893 9.03914 14 8.53043 14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6ZM12 13C14.67 13 20 14.33 20 17V20H4V17C4 14.33 9.33 13 12 13ZM12 14.9C9.03 14.9 5.9 16.36 5.9 17V18.1H18.1V17C18.1 16.36 14.97 14.9 12 14.9Z"/>
                   </svg>
                 </a>
-                <a href="#">
+                <a href="./personal__account.html">
                   Кабінет
                 </a>
               </li>
-              <li>
-                <a href="./services.html" class="with-news">
+              <li class="current">
+                <a href="#" class="with-news">
                   <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11 15H17V17H11V15ZM9 7H7V9H9V7ZM11 13H17V11H11V13ZM11 9H17V7H11V9ZM9 11H7V13H9V11ZM21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19C20.1 3 21 3.9 21 5ZM19 5H5V19H19V5ZM9 15H7V17H9V15Z"/>
                   </svg>
                 </a>
-                <a href="./services.html">
+                <a href="#">
                   Мої послуги
                 </a>
               </li>
@@ -168,317 +163,46 @@
             </ul>
             
           </nav>
-          <div class="account__settings">
-            <div class="personal__info">
-              <label class="account__label-wrapper">
-                <div class="account__label">
-                  <img src="./images/upload-file.svg" alt="Upload file">
-                  <p>
-                    <em>
-                      Завантажте Ваше фото
-                    </em>
-                  </p>
-                </div>
-                <input type="file" class="upload-file">
-              </label>
-              <div class="account__personal-text">
-                <div class="raiting">
-                  <p>
-                    <em>
-                      Рейтинг:
-                    </em>
-                  </p>
-                  <div class="raiting__stars">
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                  </div>
-                </div>
-                <h3>
-                  Name Surname
-                </h3>
-                <div class="account__place">
-                  <div class="account__place-change">
-                    <a href="https://goo.gl/maps/ZCoyezJ184Ae24rv5" target="_blank">
-                      Київська область, м.Київ,
-                    </a>
-                    <input type="text" placeholder="вулиця не вказана">
-                  </div>
-                  <div class="account__place-warning">
-                    <p>
-                      <em>
-                        ви можете уточнити адресу зараз або при створенні заявки на модель
-                      </em>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="account__statistic">
-                <div class="account__statistic-row">
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Запрошено моделей:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        11
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Вдалі зустрічі:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        6
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Позитивні відгуки (3+):
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        15
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Негативні відгуки (1-2):
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        0
-                      </em>
-                    </p>
-                  </div>
-                </div>
-                <div class="account__statistic-row">
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Рахунок:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        10560 грн
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Дохід за 30 днів:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        8000 грн
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Дохід з моменту реєстрації:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        10560 грн
-                      </em>
-                    </p>
-                  </div>
-                </div>
+          <div class="services__items">
+            <div class="services__item">
+              <p>
+                <strong>
+                  Класичний манікюр
+                </strong>
+              </p>
+              <div class="services__item-counter">
+                <p>
+                  20
+                </p>
               </div>
             </div>
-            <div class="skills">
-              <h2 class="title title--account title--skills">
-                Мої навички
-              </h2>
-              <button class="skills__button">
-                Розгортути / Згорнути
-              </button>
-              <div class="skills__cards">
-                <div class="skills__card">
-                  <div class="skills__card-title">
-                    <h3>
-                      Нігтьовий сервіс
-                    </h3>
-                    <input type="checkbox">
-                  </div>
-                  <div class="skills__card-services">
-                    <p>
-                      Надаю послуги
-                    </p>
-                    <div class="skills__card-sevices-description">
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Всі
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            3
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Аквтивні
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            2
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Валідовані
-                        </p>
-                        <div class="skills__card-services-description-part-text-background skills__card-services-description-part-text-background--validate">
-                          <p>
-                            1
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skills__card-change">
-                    <a href="">
-                      Змінити
-                    </a>
-                  </div>
-                </div>
-                <div class="skills__card">
-                  <div class="skills__card-title">
-                    <h3>
-                      Нігтьовий сервіс
-                    </h3>
-                    <input type="checkbox">
-                  </div>
-                  <div class="skills__card-services">
-                    <p>
-                      Надаю послуги
-                    </p>
-                    <div class="skills__card-sevices-description">
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Всі
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            3
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Аквтивні
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            2
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Валідовані
-                        </p>
-                        <div class="skills__card-services-description-part-text-background skills__card-services-description-part-text-background--validate">
-                          <p>
-                            1
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skills__card-change">
-                    <a href="">
-                      Змінити
-                    </a>
-                  </div>
-                </div>
-                <div class="skills__card">
-                  <div class="skills__card-title">
-                    <h3>
-                      Нігтьовий сервіс
-                    </h3>
-                    <input type="checkbox">
-                  </div>
-                  <div class="skills__card-services">
-                    <p>
-                      Надаю послуги
-                    </p>
-                    <div class="skills__card-sevices-description">
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Всі
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            3
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Аквтивні
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            2
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Валідовані
-                        </p>
-                        <div class="skills__card-services-description-part-text-background skills__card-services-description-part-text-background--validate">
-                          <p>
-                            1
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skills__card-change">
-                    <a href="">
-                      Змінити
-                    </a>
-                  </div>
-                </div>
-                <button class="add">
-                  Додати
-                </button>
+            <div class="services__item">
+              <p>
+                <strong>
+                  Нарощування
+                </strong>
+              </p>
+              <div class="services__item-counter empty">
+                <p>
+                  0
+                </p>
               </div>
             </div>
+            <div class="services__item">
+              <p>
+                <strong>
+                  Педікюр
+                </strong>
+              </p>
+              <div class="services__item-counter">
+                <p>
+                  1
+                </p>
+              </div>
+            </div>
+            <button class="add">
+              Додати
+            </button>
           </div>
         </div>
       </div>
@@ -509,12 +233,12 @@
       </ul>
     </div>
     <div class="container footer--mobile">
-      <a href="/" class="current">
+      <a href="./personal__account.html">
         <svg width="24" height="24" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
           <path d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 6C11.4696 6 10.9609 6.21071 10.5858 6.58579C10.2107 6.96086 10 7.46957 10 8C10 8.53043 10.2107 9.03914 10.5858 9.41421C10.9609 9.78929 11.4696 10 12 10C12.5304 10 13.0391 9.78929 13.4142 9.41421C13.7893 9.03914 14 8.53043 14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6ZM12 13C14.67 13 20 14.33 20 17V20H4V17C4 14.33 9.33 13 12 13ZM12 14.9C9.03 14.9 5.9 16.36 5.9 17V18.1H18.1V17C18.1 16.36 14.97 14.9 12 14.9Z"/>
         </svg>
       </a>
-      <a href="./services.html" class="with-news">
+      <a href="/" class="with-news current">
         <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M11 15H17V17H11V15ZM9 7H7V9H9V7ZM11 13H17V11H11V13ZM11 9H17V7H11V9ZM9 11H7V13H9V11ZM21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19C20.1 3 21 3.9 21 5ZM19 5H5V19H19V5ZM9 15H7V17H9V15Z"/>
         </svg>
