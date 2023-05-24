@@ -6,6 +6,10 @@
   --accent-green-color: #88C737;
   --validate-color: #2DA771;
   --light-grey-text-color: #a6a6a6;
+
+  --min-height-mobile: calc(100vh - 105px);
+  --min-height-tablet: calc(100vh - 115px);
+  --min-height-desktop: calc(100vh - 285px);
 }
 
 *,
@@ -805,8 +809,9 @@ footer {
 .header--white .header__line {
   display: none;
 }
-.header__container--account {
-  padding-bottom: 7px;
+.header--white .header__container {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .personal__info {
@@ -1068,8 +1073,14 @@ a.with-news::after {
 }
 
 @media screen and (min-width: 768px) {
-  .header__container--account {
-    padding-bottom: 20px;
+  .header--white .header__login li:last-child {
+    padding: 9px;
+  }
+  .header--white .header__login li:last-child span {
+    display: none;
+  }
+  .header--white .header__login li:last-child img {
+    display: block;
   }
 
   .skills__cards {
@@ -1084,8 +1095,24 @@ a.with-news::after {
 }
 
 @media screen and (min-width: 1024px) {
+  .header--white .header__login li:first-child {
+    display: none;
+  }
+  .header--white .header__menu {
+    display: none;
+  }
+  .header--white .menu__mobile {
+    display: block;
+  }
+  .header--white .header__menu-list {
+    display: none;
+  }
+  .header--white .logo {
+    top: 0;
+  }
+
   main {
-    min-height: calc(100vh - 335px);
+    min-height: var(--min-height-desktop);
   }
   .main-content {
     display: flex;
@@ -1244,7 +1271,7 @@ a.with-news::after {
 }
 
 .services {
-  min-height: calc(100vh - 110px);
+  min-height: var(--min-height-mobile);
 }
 
 .services__item {
@@ -1277,20 +1304,20 @@ a.with-news::after {
 
 @media screen and (min-width: 768px) {
   .services {
-    min-height: calc(100vh - 145px);
+    min-height: var(--min-height-tablet);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .services {
-    min-height: auto;
+    min-height: var(--min-height-desktop);
   }
 }
 /*#endregion services*/
 
 /*#region applications*/
 .applications {
-  min-height: calc(100vh - 110px);
+  min-height: var(--min-height-mobile);
 }
 
 .applications__wrapper {
@@ -1422,13 +1449,13 @@ a.with-news::after {
 
 @media screen and (min-width: 768px) {
   .applications {
-    min-height: calc(100vh - 145px);
+    min-height: var(--min-height-tablet);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .applications {
-    min-height: auto;
+    min-height: var(--min-height-desktop);
   }
 
   .applications__cards {
