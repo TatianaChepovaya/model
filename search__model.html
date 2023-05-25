@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      type="text/javascript"
-      src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"
-    ></script>
-    <script src="./menu-mob.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search models</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script
+    type="text/javascript"
+    src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"
+  ></script>
+  <script src="./menu-mob.js"></script>
+</head>
 <body>
   <header class="header--white">
-    <div class="container header__container header__container--account">
+    <div class="container header__container">
       <div class="header__wrap">
         <a class="logo">
           <img src="./images/LOGO.svg" alt="" width="93" height="39" />
@@ -92,10 +92,10 @@
     </div>
   </header>
   <main>
-    <section class="section services">
-      <div class="container services__container">
+    <section class="section search">
+      <div class="container">
         <h2 class="title title--account title--services">
-          Послуги
+          Знайти модель
         </h2>
         <div class="main-content">
           <nav class="navigation">
@@ -110,13 +110,13 @@
                   Кабінет
                 </a>
               </li>
-              <li class="current">
-                <a href="#" class="with-news">
+              <li>
+                <a href="./services.html" class="with-news">
                   <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11 15H17V17H11V15ZM9 7H7V9H9V7ZM11 13H17V11H11V13ZM11 9H17V7H11V9ZM9 11H7V13H9V11ZM21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19C20.1 3 21 3.9 21 5ZM19 5H5V19H19V5ZM9 15H7V17H9V15Z"/>
                   </svg>
                 </a>
-                <a href="#">
+                <a href="./services.html">
                   Мої послуги
                 </a>
               </li>
@@ -130,13 +130,13 @@
                   Заявки
                 </a>
               </li>
-              <li>
-                <a href="./search__model.html">
+              <li class="current">
+                <a href="#">
                   <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.5 3C11.2239 3 12.8772 3.68482 14.0962 4.90381C15.3152 6.12279 16 7.77609 16 9.5C16 11.11 15.41 12.59 14.44 13.73L14.71 14H15.5L20.5 19L19 20.5L14 15.5V14.71L13.73 14.44C12.59 15.41 11.11 16 9.5 16C7.77609 16 6.12279 15.3152 4.90381 14.0962C3.68482 12.8772 3 11.2239 3 9.5C3 7.77609 3.68482 6.12279 4.90381 4.90381C6.12279 3.68482 7.77609 3 9.5 3ZM9.5 5C7 5 5 7 5 9.5C5 12 7 14 9.5 14C12 14 14 12 14 9.5C14 7 12 5 9.5 5Z"/>
                   </svg>
                 </a>
-                <a href="./search__model.html">
+                <a href="#">
                   Знайти модель
                 </a>
               </li>
@@ -162,46 +162,153 @@
               </li>
             </ul>
           </nav>
-          <div class="services__items">
-            <div class="services__item">
-              <p>
-                <strong>
-                  Класичний манікюр
-                </strong>
-              </p>
-              <div class="services__item-counter">
-                <p>
-                  20
-                </p>
-              </div>
-            </div>
-            <div class="services__item">
-              <p>
-                <strong>
-                  Нарощування
-                </strong>
-              </p>
-              <div class="services__item-counter empty">
-                <p>
-                  0
-                </p>
-              </div>
-            </div>
-            <div class="services__item">
-              <p>
-                <strong>
-                  Педікюр
-                </strong>
-              </p>
-              <div class="services__item-counter">
-                <p>
-                  1
-                </p>
-              </div>
-            </div>
-            <button class="add">
-              Додати
+          <div class="search__wrapper">
+            <button class="filter__search__model">
+              <span>
+                <img src="./images/filter.svg" alt="Filter">
+              </span>
+              &ensp; Фільтр
             </button>
+            <div class="search__cards">
+              <div class="search__card">
+                <div class="search__card-info">
+                  <div class="search__card-photo">
+                    <img src="./images/model-photo.jpg" alt="Model photo">
+                  </div>
+                  <div class="search__card-text">
+                    <p>
+                      Юлія
+                    </p>
+                    <p>
+                      Вік: 25
+                    </p>
+                  </div>
+                </div>
+                <div class="search__card-actions">
+                  <button class="info">
+                    <img src="./images/info.svg" alt="More info">
+                  </button>
+                  <button class="apply">
+                    <img src="./images/apply.svg" alt="Apply">
+                  </button>
+                </div>
+              </div>
+              <div class="search__card">
+                <div class="search__card-info">
+                  <div class="search__card-photo">
+                    <img src="./images/model-photo.jpg" alt="Model photo">
+                  </div>
+                  <div class="search__card-text">
+                    <p>
+                      Юлія
+                    </p>
+                    <p>
+                      Вік: 25
+                    </p>
+                  </div>
+                </div>
+                <div class="search__card-actions">
+                  <button class="info">
+                    <img src="./images/info.svg" alt="More info">
+                  </button>
+                  <button class="apply">
+                    <img src="./images/apply.svg" alt="Apply">
+                  </button>
+                </div>
+              </div>
+              <div class="search__card">
+                <div class="search__card-info">
+                  <div class="search__card-photo">
+                    <img src="./images/model-photo.jpg" alt="Model photo">
+                  </div>
+                  <div class="search__card-text">
+                    <p>
+                      Юлія
+                    </p>
+                    <p>
+                      Вік: 25
+                    </p>
+                  </div>
+                </div>
+                <div class="search__card-actions">
+                  <button class="info">
+                    <img src="./images/info.svg" alt="More info">
+                  </button>
+                  <button class="apply">
+                    <img src="./images/apply.svg" alt="Apply">
+                  </button>
+                </div>
+              </div>
+              <div class="search__card">
+                <div class="search__card-info">
+                  <div class="search__card-photo">
+                    <img src="./images/model-photo.jpg" alt="Model photo">
+                  </div>
+                  <div class="search__card-text">
+                    <p>
+                      Юлія
+                    </p>
+                    <p>
+                      Вік: 25
+                    </p>
+                  </div>
+                </div>
+                <div class="search__card-actions">
+                  <button class="info">
+                    <img src="./images/info.svg" alt="More info">
+                  </button>
+                  <button class="apply">
+                    <img src="./images/apply.svg" alt="Apply">
+                  </button>
+                </div>
+              </div>
+              <div class="search__card">
+                <div class="search__card-info">
+                  <div class="search__card-photo">
+                    <img src="./images/model-photo.jpg" alt="Model photo">
+                  </div>
+                  <div class="search__card-text">
+                    <p>
+                      Юлія
+                    </p>
+                    <p>
+                      Вік: 25
+                    </p>
+                  </div>
+                </div>
+                <div class="search__card-actions">
+                  <button class="info">
+                    <img src="./images/info.svg" alt="More info">
+                  </button>
+                  <button class="apply">
+                    <img src="./images/apply.svg" alt="Apply">
+                  </button>
+                </div>
+              </div>
+              <div class="search__card">
+                <div class="search__card-info">
+                  <div class="search__card-photo">
+                    <img src="./images/model-photo.jpg" alt="Model photo">
+                  </div>
+                  <div class="search__card-text">
+                    <p>
+                      Юлія
+                    </p>
+                    <p>
+                      Вік: 25
+                    </p>
+                  </div>
+                </div>
+                <div class="search__card-actions">
+                  <button class="info">
+                    <img src="./images/info.svg" alt="More info">
+                  </button>
+                  <button class="apply">
+                    <img src="./images/apply.svg" alt="Apply">
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -237,7 +344,7 @@
           <path d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 6C11.4696 6 10.9609 6.21071 10.5858 6.58579C10.2107 6.96086 10 7.46957 10 8C10 8.53043 10.2107 9.03914 10.5858 9.41421C10.9609 9.78929 11.4696 10 12 10C12.5304 10 13.0391 9.78929 13.4142 9.41421C13.7893 9.03914 14 8.53043 14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6ZM12 13C14.67 13 20 14.33 20 17V20H4V17C4 14.33 9.33 13 12 13ZM12 14.9C9.03 14.9 5.9 16.36 5.9 17V18.1H18.1V17C18.1 16.36 14.97 14.9 12 14.9Z"/>
         </svg>
       </a>
-      <a href="#" class="with-news current">
+      <a href="./services.html" class="with-news">
         <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M11 15H17V17H11V15ZM9 7H7V9H9V7ZM11 13H17V11H11V13ZM11 9H17V7H11V9ZM9 11H7V13H9V11ZM21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19C20.1 3 21 3.9 21 5ZM19 5H5V19H19V5ZM9 15H7V17H9V15Z"/>
         </svg>
@@ -247,7 +354,7 @@
           <path d="M12 5C11.0717 5 10.1815 5.36875 9.52513 6.02513C8.86875 6.6815 8.5 7.57174 8.5 8.5C8.5 9.42826 8.86875 10.3185 9.52513 10.9749C10.1815 11.6313 11.0717 12 12 12C12.9283 12 13.8185 11.6313 14.4749 10.9749C15.1313 10.3185 15.5 9.42826 15.5 8.5C15.5 7.57174 15.1313 6.6815 14.4749 6.02513C13.8185 5.36875 12.9283 5 12 5ZM12 7C12.3978 7 12.7794 7.15804 13.0607 7.43934C13.342 7.72064 13.5 8.10218 13.5 8.5C13.5 8.89782 13.342 9.27936 13.0607 9.56066C12.7794 9.84196 12.3978 10 12 10C11.6022 10 11.2206 9.84196 10.9393 9.56066C10.658 9.27936 10.5 8.89782 10.5 8.5C10.5 8.10218 10.658 7.72064 10.9393 7.43934C11.2206 7.15804 11.6022 7 12 7ZM5.5 8C4.83696 8 4.20107 8.26339 3.73223 8.73223C3.26339 9.20107 3 9.83696 3 10.5C3 11.44 3.53 12.25 4.29 12.68C4.65 12.88 5.06 13 5.5 13C5.94 13 6.35 12.88 6.71 12.68C7.08 12.47 7.39 12.17 7.62 11.81C6.89 10.86 6.5 9.7 6.5 8.5C6.5 8.41 6.5 8.31 6.5 8.22C6.2 8.08 5.86 8 5.5 8ZM18.5 8C18.14 8 17.8 8.08 17.5 8.22C17.5 8.31 17.5 8.41 17.5 8.5C17.5 9.7 17.11 10.86 16.38 11.81C16.5 12 16.63 12.15 16.78 12.3C16.94 12.45 17.1 12.58 17.29 12.68C17.65 12.88 18.06 13 18.5 13C18.94 13 19.35 12.88 19.71 12.68C20.47 12.25 21 11.44 21 10.5C21 9.83696 20.7366 9.20107 20.2678 8.73223C19.7989 8.26339 19.163 8 18.5 8ZM12 14C9.66 14 5 15.17 5 17.5V19H19V17.5C19 15.17 14.34 14 12 14ZM4.71 14.55C2.78 14.78 0 15.76 0 17.5V19H3V17.07C3 16.06 3.69 15.22 4.71 14.55ZM19.29 14.55C20.31 15.22 21 16.06 21 17.07V19H24V17.5C24 15.76 21.22 14.78 19.29 14.55ZM12 16C13.53 16 15.24 16.5 16.23 17H7.77C8.76 16.5 10.47 16 12 16Z"/>
         </svg>
       </a>
-      <a href="./search__model.html">
+      <a href="#" class="current">
         <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M9.5 3C11.2239 3 12.8772 3.68482 14.0962 4.90381C15.3152 6.12279 16 7.77609 16 9.5C16 11.11 15.41 12.59 14.44 13.73L14.71 14H15.5L20.5 19L19 20.5L14 15.5V14.71L13.73 14.44C12.59 15.41 11.11 16 9.5 16C7.77609 16 6.12279 15.3152 4.90381 14.0962C3.68482 12.8772 3 11.2239 3 9.5C3 7.77609 3.68482 6.12279 4.90381 4.90381C6.12279 3.68482 7.77609 3 9.5 3ZM9.5 5C7 5 5 7 5 9.5C5 12 7 14 9.5 14C12 14 14 12 14 9.5C14 7 12 5 9.5 5Z"/>
         </svg>
