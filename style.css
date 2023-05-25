@@ -10,6 +10,8 @@
   --min-height-mobile: calc(100vh - 105px);
   --min-height-tablet: calc(100vh - 115px);
   --min-height-desktop: calc(100vh - 285px);
+  --min-height-mobile-with-main-footer: calc(100vh - 418px);
+  --min-height-tablet-with-main-footer: calc(100vh - 289px);
 }
 
 *,
@@ -1566,4 +1568,125 @@ a.with-news::after {
     min-height: var(--min-height-desktop);
   }
 }
-/*#ebdregion searchModel*/
+/*#endregion searchModel*/
+
+/*#region registration*/
+.footer--main .footer--mobile {
+  display: none;
+}
+.footer--main .footer {
+  display: block;
+}
+
+.registration {
+  min-height: var(--min-height-mobile-with-main-footer);
+}
+
+.form__wrapper {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto 35px;
+}
+
+.form__wrapper input,
+.form__wrapper select {
+  display: block;
+  width: 100%;
+  padding: 7px 10px;
+  border: solid 1px #A6A6A6;
+  border-radius: 100px;
+  margin-bottom: 15px;
+}
+.form__wrapper input:nth-of-type(2) {
+  margin-bottom: 10px;
+}
+.form__wrapper input:last-of-type {
+  margin-bottom: 35px;
+}
+.form__wrapper--confirmation input:first-child {
+  margin-bottom: 15px;
+}
+.form__wrapper p {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #A6A6A6;
+}
+.form__wrapper button {
+  display: block;
+  width: 130px;
+  padding: 7px;
+  margin: 0 auto;
+  border: none;
+  background: var(--accent-color);
+  border-radius: 100px;
+  cursor: pointer;
+}
+.registration a {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  color: #A6A6A6;
+  text-decoration: underline;
+}
+.form__wrapper--confirmation .timer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.form__wrapper--confirmation .timer__wrapper p {
+  text-decoration: underline;
+}
+.form__wrapper--confirmation .timer__wrapper button {
+  width: 100px;
+  background-color: transparent;
+  color: #A6A6A6;
+  text-decoration: underline;
+  text-align: left;
+  margin: 0;
+}
+.title--greeting {
+  margin-bottom: 15px;
+}
+.container--greeting > p {
+  width: 240px;
+  text-align: center;
+  margin: 0 auto 15px;
+}
+.form__wrapper--greeting label,
+.form__wrapper--greeting .checkboxes__wrapper p {
+  color: #464646;
+}
+.form__wrapper--greeting .checkboxes__wrapper p {
+  margin-bottom: 5px;
+  text-decoration: none;
+  text-align: left;
+}
+.form__wrapper--greeting .checkboxes__wrapper {
+  margin-bottom: 25px;
+}
+.form__wrapper--greeting label select {
+  margin-top: 5px;
+}
+.form__wrapper--greeting label input {
+  margin-top: 5px;
+}
+.form__wrapper--greeting .checkboxes__wrapper label {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.form__wrapper--greeting .checkboxes__wrapper label input {
+  width: max-content;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .registration {
+    min-height: var(--min-height-tablet-with-main-footer);
+  }
+}
+/*#endregion registration*/
