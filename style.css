@@ -837,6 +837,7 @@ footer {
   height: 130px;
   margin: 0 auto 20px;
   background-color: #D9D9D9;
+  cursor: pointer;
 }
 .account__label {
   display: flex;
@@ -1020,9 +1021,14 @@ footer {
   height: 30px;
   padding: 7px;
   margin: 0 auto;
-  border: none;
+  border: solid 1px var(--accent-color);
   background-color: var(--accent-color);
   border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+.add:hover {
+  background-color: #fff;
 }
 .account__personal-text h3 {
   display: none;
@@ -1421,10 +1427,15 @@ a.with-news::after {
   justify-content: center;
   height: 30px;
   width: 50px;
-  background: #FFFFFF;
+  background: #fff;
   border: 1px solid #A6A6A6;
   border-radius: 100px;
   cursor: pointer;
+  transition: all 0.4s;
+}
+.application__card-model-additional-buttons button:hover {
+  border-color: var(--accent-green-color);
+  background: rgba(136, 199, 55, 0.2);
 }
 
 .application__card-actions {
@@ -1443,10 +1454,18 @@ a.with-news::after {
 }
 .application__card-actions-no {
   background-color: var(--accent-color);
+  transition: transform 0.4s;
+}
+.application__card-actions-no:hover {
+  transform: scale(0.85);
 }
 .application__card-actions-yes {
   color: #ffffff;
   background-color: var(--accent-green-color);
+  transition: transform 0.4s;
+}
+.application__card-actions-yes:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {
@@ -1542,14 +1561,22 @@ a.with-news::after {
   height: 30px;
   border-radius: 100px;
   cursor: pointer;
+  transition: all 0.4s;
 }
 .search__card-actions button.info {
   background-color: transparent;
   border: solid 1px #A6A6A6;
 }
+.search__card-actions button.info:hover {
+  background-color: rgba(136, 199, 55, 0.2);
+  border: solid 1px var(--accent-green-color);
+}
 .search__card-actions button.apply {
   border: none;
   background-color: var(--accent-green-color);
+}
+.search__card-actions button.apply:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {
@@ -1596,6 +1623,11 @@ a.with-news::after {
   border: solid 1px #A6A6A6;
   border-radius: 100px;
   margin-bottom: 15px;
+  outline: none;
+}
+.form__wrapper input:focus,
+.form__wrapper select:focus {
+  border: solid 1px var(--accent-color);
 }
 .form__wrapper input:nth-of-type(2) {
   margin-bottom: 10px;
@@ -1616,10 +1648,14 @@ a.with-news::after {
   width: 130px;
   padding: 7px;
   margin: 0 auto;
-  border: none;
-  background: var(--accent-color);
+  border: solid 1px var(--accent-color);
+  background-color: var(--accent-color);
   border-radius: 100px;
   cursor: pointer;
+  transition: background-color 0.4s;
+}
+.form__wrapper button:hover {
+  background-color: #fff;
 }
 .registration a {
   display: block;
@@ -1644,6 +1680,7 @@ a.with-news::after {
   text-decoration: underline;
   text-align: left;
   margin: 0;
+  border: none;
 }
 .title--greeting {
   margin-bottom: 15px;
