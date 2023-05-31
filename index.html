@@ -111,7 +111,42 @@
         <div class="container objective__container">
           <h2 class="title">Чого ви бажаєте?</h2>
           <div class="objective__wrap">
-            <div class="objective__left-parl">
+            <div class="objective__tab-buttons">
+              <div class="obejective__tab-button obejective__tab-buttons--left">
+                <button data-tab="client" class="tab__button objective__left-parl-btn active">
+                  Бажаю знайти <span class="objective__accent">клієнтів</span> !
+                </button>
+                <span class="objective__line"></span>
+              </div>
+              <div class="obejective__tab-button objective__tab-buttons--right">
+                <button data-tab="model" class="tab__button objective__right-parl-btn">
+                  Бажаю <span class="objective__accent">зачіску</span> за приємною ціною !
+                </button>
+                <span class="objective__line"></span>
+              </div>
+            </div>
+            <div class="objective__tab-content">
+              <div id="client" class="objective__tab-content-part">
+                <p class="objective__text">
+                  Я початківець в своїй справі та шукаю перших клієнтів
+                </p>
+                <p class="objective__text-accent">або</p>
+                <p class="objective__text">
+                  Досвідчений майстер що відпрацьовує нові навички
+                </p>
+                <a class="main__btn objective__btn" href="">ЗНАЙТИ МОДЕЛЬ</a>
+              </div>
+              <div id="model" class="objective__tab-content-part">
+                <p class="objective__text">
+                  Шукаю майстра з манікюра / педікюра / перукаря / візажиста /
+                  масажиста тощо.
+                </p>
+                <p class="objective__text-accent">або</p>
+                <p class="objective__text">Просто <span>ЩОСЬ новеньке</span></p>
+                <a class="main__btn objective__btn" href="">СТАТИ МОДЕЛЛЮ</a>
+              </div>
+            </div>
+            <!-- <div class="objective__left-parl">
               <a class="main__btn objective__left-parl-btn" href=""
                 >Бажаю знайти
                 <span class="objective__accent">клієнтів</span> !</a
@@ -139,7 +174,7 @@
               <p class="objective__text-accent">або</p>
               <p class="objective__text">Просто <span>ЩОСЬ новеньке</span></p>
               <a class="main__btn objective__btn" href="">СТАТИ МОДЕЛЛЮ</a>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -288,6 +323,11 @@
           </div>
         </div></div>
       </section>
+      <article class="container container--chat-button">
+        <button class="chat-button">
+          <img src="./images/chat.svg" alt="Chat">
+        </button>
+      </article>
     </main>
     <footer>
       <div class="container footer_container">

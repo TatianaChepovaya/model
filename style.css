@@ -216,10 +216,11 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
   border-radius: 100px;
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
-  padding: 7px;
+  padding: 5px;
   font-weight: 400;
 }
 
@@ -247,10 +248,19 @@ header {
   margin-bottom: 30px;
 }
 
+
+
+
+
 .objective__left-parl-btn,
 .objective__right-parl-btn {
-  margin-bottom: 32px;
   font-weight: 500;
+}
+.objective__left-parl-btn {
+  margin-bottom: 10px;
+}
+.objective__right-parl-btn {
+  margin-bottom: 32px;
 }
 
 .objective__accent {
@@ -269,11 +279,6 @@ header {
 
 .objective__left-parl-btn .objective__accent {
   margin-left: 10px;
-}
-
-.objective__right-parl-btn {
-  background-color: #ffffff;
-  border: 1px solid #2d2d2f;
 }
 
 .objective__right-parl-btn .objective__accent {
@@ -317,6 +322,36 @@ header {
 .objective__btn {
   margin: 0 auto;
 }
+.objective__tab-content-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 210px;
+}
+
+.tab__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5px;
+  border-radius: 100px;
+  background-color: transparent;
+  border: 1px solid #2d2d2f;
+}
+
+.tab__button.active {
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+.objective__tab-content-part:not(:first-child) {
+  display: none;
+}
+
+
+
 
 .findmodel__item,
 .joinmodel__item,
@@ -398,10 +433,19 @@ header {
   width: fit-content;
 }
 
-.banner__right-part img {
+.banner__right-part {
   position: absolute;
-  right: -76px;
-  bottom: -70px;
+  top: -65px;
+  right: 0;
+  bottom: -68px;
+  height: auto;
+  width: 50%;
+}
+
+.banner__right-part img {
+  object-fit: cover;
+  height: 100%;
+  width: auto;
 }
 
 .apps__container {
@@ -561,6 +605,18 @@ footer {
   .objective__btn {
     padding: 14px 86px;
   }
+  .objective__tab-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .obejective__tab-button {
+    flex: 1;
+  }
+  .tab__button {
+    padding: 10px;
+  }
   .findmodel__wrap,
   .joinmodel__wrap {
     display: flex;
@@ -613,6 +669,10 @@ footer {
   }
   .banner__btn {
     padding: 13px 16px;
+  }
+  .banner__right-part {
+    top: -125px;
+    bottom: -115px;
   }
   .apps .title {
     height: 58px;
@@ -729,10 +789,7 @@ footer {
   .hero__right-part img {
     bottom: -161px;
   }
-  .objective__wrap {
-    display: flex;
-    flex-wrap: nowrap;
-  }
+
   .objective__accent {
     width: 111px;
     height: 45px;
@@ -761,6 +818,21 @@ footer {
     border-bottom: 1px solid #817474;
     margin: 0 auto 29px auto;
   }
+
+  .tab__button.active {
+    background-color: transparent;
+    border: none;
+  }
+  .objective__tab-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 50px;
+  }
+  .objective__tab-content-part {
+    flex: 1;
+  }
+
   .findmodel__item a,
   .joinmodel__item a,
   .findmodel__item p,
@@ -793,6 +865,9 @@ footer {
     font-size: 40px;
     margin-bottom: 45px;
   }
+  .banner__right-part {
+    bottom: -110px;
+  }
   .apps {
     padding-bottom: 0;
   }
@@ -804,29 +879,36 @@ footer {
 
 /*#region chatButton*/
 .container--chat-button {
-  position: relative;
+  display: none;
 }
-.chat-button {
-  position: absolute;
-  bottom: -30px;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: solid 1px var(--accent-color);
-  background-color: var(--accent-color);
-  cursor: pointer;
-  transition: background-color 0.4s;
-}
-.chat-button:hover {
-  background-color: #fff;
-}
-.chat-button img {
-  width: 80%;
-  height: 80%;
+
+@media screen and (min-width: 1024px) {
+  .container--chat-button {
+    display: block;
+    position: relative;
+  }
+  .chat-button {
+    position: fixed;
+    bottom: 190px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 1px var(--accent-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+    transition: background-color 0.4s;
+  }
+  .chat-button:hover {
+    background-color: #fff;
+  }
+  .chat-button img {
+    width: 80%;
+    height: 80%;
+  }
 }
 /*#endregion chatButton*/
 
