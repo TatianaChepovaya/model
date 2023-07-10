@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal account</title>
+  <title>Chat</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -20,7 +20,7 @@
 </head>
 <body>
   <header class="header--white">
-    <div class="container header__container header__container--account">
+    <div class="container header__container">
       <div class="header__wrap">
         <a class="logo">
           <img src="./images/LOGO.svg" alt="" width="93" height="39" />
@@ -92,26 +92,18 @@
     </div>
   </header>
   <main>
-    <section class="section account">
+    <section class="section">
       <div class="container">
-        <h2 class="title title--account">
-          Це ваш кабінет
-        </h2>
-        <p>
-          <em>
-            Заповніть особисті дані та розпочинайте пошук
-          </em>
-        </p>
         <div class="main-content">
           <nav class="navigation">
             <ul class="navigation-list">
-              <li class="current">
-                <a href="#">
+              <li>
+                <a href="./index.html">
                   <svg width="24" height="24" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 6C11.4696 6 10.9609 6.21071 10.5858 6.58579C10.2107 6.96086 10 7.46957 10 8C10 8.53043 10.2107 9.03914 10.5858 9.41421C10.9609 9.78929 11.4696 10 12 10C12.5304 10 13.0391 9.78929 13.4142 9.41421C13.7893 9.03914 14 8.53043 14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6ZM12 13C14.67 13 20 14.33 20 17V20H4V17C4 14.33 9.33 13 12 13ZM12 14.9C9.03 14.9 5.9 16.36 5.9 17V18.1H18.1V17C18.1 16.36 14.97 14.9 12 14.9Z"/>
                   </svg>
                 </a>
-                <a href="#">
+                <a href="./index.html">
                   Кабінет
                 </a>
               </li>
@@ -145,7 +137,7 @@
                   Знайти модель
                 </a>
               </li>
-              <li>
+              <li class="current">
                 <a href="./messages.html" class="with-news">
                   <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 3C6.5 3 2 6.58 2 11C2.05 13.15 3.06 15.17 4.75 16.5C4.75 17.1 4.33 18.67 2 21C4.37 20.89 6.64 20 8.47 18.5C9.61 18.83 10.81 19 12 19C17.5 19 22 15.42 22 11C22 6.58 17.5 3 12 3ZM12 17C7.58 17 4 14.31 4 11C4 7.69 7.58 5 12 5C16.42 5 20 7.69 20 11C20 14.31 16.42 17 12 17Z"/>
@@ -167,315 +159,55 @@
               </li>
             </ul>
           </nav>
-          <div class="account__settings">
-            <div class="personal__info">
-              <label class="account__label-wrapper">
-                <div class="account__label">
-                  <img src="./images/upload-file.svg" alt="Upload file">
-                  <p>
-                    <em>
-                      Завантажте Ваше фото
-                    </em>
-                  </p>
-                </div>
-                <input type="file" class="upload-file">
-              </label>
-              <div class="account__personal-text">
-                <div class="raiting">
-                  <p>
-                    <em>
-                      Рейтинг:
-                    </em>
-                  </p>
-                  <div class="raiting__stars">
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                  </div>
-                </div>
-                <h3>
-                  Name Surname
-                </h3>
-                <div class="account__place">
-                  <div class="account__place-change">
-                    <a href="https://goo.gl/maps/ZCoyezJ184Ae24rv5" target="_blank">
-                      Київська область, м.Київ,
-                    </a>
-                    <input type="text" placeholder="вулиця не вказана">
-                  </div>
-                  <div class="account__place-warning">
-                    <p>
-                      <em>
-                        ви можете уточнити адресу зараз або при створенні заявки на модель
-                      </em>
-                    </p>
-                  </div>
-                </div>
+          <div class="chat_content">
+            <div class="message opponent_message">
+              <div class="message_photo-wrapper">
+                <img src="./images/model-photo.jpg">
               </div>
-              <div class="account__statistic">
-                <div class="account__statistic-row">
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Запрошено моделей:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        11
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Вдалі зустрічі:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        6
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Позитивні відгуки (3+):
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        15
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Негативні відгуки (1-2):
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        0
-                      </em>
-                    </p>
-                  </div>
-                </div>
-                <div class="account__statistic-row">
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Рахунок:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        10560 грн
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Дохід за 30 днів:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        8000 грн
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Дохід з моменту реєстрації:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        10560 грн
-                      </em>
-                    </p>
-                  </div>
-                </div>
+              <div class="message_text-wrapper">
+                <p>
+                  Привіт, я хотіла б записатись на манікюр. На коли є час?
+                </p>
               </div>
             </div>
-            <div class="skills">
-              <h2 class="title title--account title--skills">
-                Мої навички
-              </h2>
-              <button class="skills__button">
-                Розгортути / Згорнути
-              </button>
-              <div class="skills__cards">
-                <div class="skills__card">
-                  <div class="skills__card-title">
-                    <h3>
-                      Нігтьовий сервіс
-                    </h3>
-                    <input type="checkbox">
-                  </div>
-                  <div class="skills__card-services">
-                    <p>
-                      Надаю послуги
-                    </p>
-                    <div class="skills__card-sevices-description">
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Всі
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            3
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Аквтивні
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            2
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Валідовані
-                        </p>
-                        <div class="skills__card-services-description-part-text-background skills__card-services-description-part-text-background--validate">
-                          <p>
-                            1
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skills__card-change">
-                    <a href="">
-                      Змінити
-                    </a>
-                  </div>
-                </div>
-                <div class="skills__card">
-                  <div class="skills__card-title">
-                    <h3>
-                      Нігтьовий сервіс
-                    </h3>
-                    <input type="checkbox">
-                  </div>
-                  <div class="skills__card-services">
-                    <p>
-                      Надаю послуги
-                    </p>
-                    <div class="skills__card-sevices-description">
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Всі
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            3
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Аквтивні
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            2
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Валідовані
-                        </p>
-                        <div class="skills__card-services-description-part-text-background skills__card-services-description-part-text-background--validate">
-                          <p>
-                            1
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skills__card-change">
-                    <a href="">
-                      Змінити
-                    </a>
-                  </div>
-                </div>
-                <div class="skills__card">
-                  <div class="skills__card-title">
-                    <h3>
-                      Нігтьовий сервіс
-                    </h3>
-                    <input type="checkbox">
-                  </div>
-                  <div class="skills__card-services">
-                    <p>
-                      Надаю послуги
-                    </p>
-                    <div class="skills__card-sevices-description">
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Всі
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            3
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Аквтивні
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            2
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Валідовані
-                        </p>
-                        <div class="skills__card-services-description-part-text-background skills__card-services-description-part-text-background--validate">
-                          <p>
-                            1
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skills__card-change">
-                    <a href="">
-                      Змінити
-                    </a>
-                  </div>
-                </div>
-                <button class="add">
-                  Додати
-                </button>
+            <div class="message owner_message">
+              <div class="message_photo-wrapper">
+                <img src="./images/model-photo.jpg">
+              </div>
+              <div class="message_text-wrapper">
+                <p>
+                  Привіт, я хотіла б записатись на манікюр. На коли є час?
+                </p>
+              </div>
+            </div>
+            <div class="message owner_message">
+              <div class="message_photo-wrapper">
+                <img src="./images/model-photo.jpg">
+              </div>
+              <div class="message_text-wrapper">
+                <p>
+                  Привіт, я хотіла б записатись на манікюр. На коли є час?
+                </p>
+              </div>
+            </div>
+            <div class="message opponent_message">
+              <div class="message_photo-wrapper">
+                <img src="./images/model-photo.jpg">
+              </div>
+              <div class="message_text-wrapper">
+                <p>
+                  Привіт, я хотіла б записатись на манікюр. На коли є час?
+                </p>
+              </div>
+            </div>
+            <div class="message owner_message">
+              <div class="message_photo-wrapper">
+                <img src="./images/model-photo.jpg">
+              </div>
+              <div class="message_text-wrapper">
+                <p>
+                  Привіт, я хотіла б записатись на манікюр. На коли є час?
+                </p>
               </div>
             </div>
           </div>
@@ -508,7 +240,7 @@
       </ul>
     </div>
     <div class="container footer--mobile">
-      <a href="#" class="current">
+      <a href="#">
         <svg width="24" height="24" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
           <path d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 6C11.4696 6 10.9609 6.21071 10.5858 6.58579C10.2107 6.96086 10 7.46957 10 8C10 8.53043 10.2107 9.03914 10.5858 9.41421C10.9609 9.78929 11.4696 10 12 10C12.5304 10 13.0391 9.78929 13.4142 9.41421C13.7893 9.03914 14 8.53043 14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6ZM12 13C14.67 13 20 14.33 20 17V20H4V17C4 14.33 9.33 13 12 13ZM12 14.9C9.03 14.9 5.9 16.36 5.9 17V18.1H18.1V17C18.1 16.36 14.97 14.9 12 14.9Z"/>
         </svg>
@@ -528,12 +260,12 @@
           <path d="M9.5 3C11.2239 3 12.8772 3.68482 14.0962 4.90381C15.3152 6.12279 16 7.77609 16 9.5C16 11.11 15.41 12.59 14.44 13.73L14.71 14H15.5L20.5 19L19 20.5L14 15.5V14.71L13.73 14.44C12.59 15.41 11.11 16 9.5 16C7.77609 16 6.12279 15.3152 4.90381 14.0962C3.68482 12.8772 3 11.2239 3 9.5C3 7.77609 3.68482 6.12279 4.90381 4.90381C6.12279 3.68482 7.77609 3 9.5 3ZM9.5 5C7 5 5 7 5 9.5C5 12 7 14 9.5 14C12 14 14 12 14 9.5C14 7 12 5 9.5 5Z"/>
         </svg>
       </a>
-      <a href="./messages.html" class="with-news">
+      <a href="./messages.html" class="with-news current">
         <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 3C6.5 3 2 6.58 2 11C2.05 13.15 3.06 15.17 4.75 16.5C4.75 17.1 4.33 18.67 2 21C4.37 20.89 6.64 20 8.47 18.5C9.61 18.83 10.81 19 12 19C17.5 19 22 15.42 22 11C22 6.58 17.5 3 12 3ZM12 17C7.58 17 4 14.31 4 11C4 7.69 7.58 5 12 5C16.42 5 20 7.69 20 11C20 14.31 16.42 17 12 17Z"/>
         </svg>
       </a>
-      <a href="#">
+      <a href="">
         <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 8C13.0609 8 14.0783 8.42143 14.8284 9.17157C15.5786 9.92172 16 10.9391 16 12C16 13.0609 15.5786 14.0783 14.8284 14.8284C14.0783 15.5786 13.0609 16 12 16C10.9391 16 9.92172 15.5786 9.17157 14.8284C8.42143 14.0783 8 13.0609 8 12C8 10.9391 8.42143 9.92172 9.17157 9.17157C9.92172 8.42143 10.9391 8 12 8ZM12 10C11.4696 10 10.9609 10.2107 10.5858 10.5858C10.2107 10.9609 10 11.4696 10 12C10 12.5304 10.2107 13.0391 10.5858 13.4142C10.9609 13.7893 11.4696 14 12 14C12.5304 14 13.0391 13.7893 13.4142 13.4142C13.7893 13.0391 14 12.5304 14 12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10ZM10 22C9.75 22 9.54 21.82 9.5 21.58L9.13 18.93C8.5 18.68 7.96 18.34 7.44 17.94L4.95 18.95C4.73 19.03 4.46 18.95 4.34 18.73L2.34 15.27C2.21 15.05 2.27 14.78 2.46 14.63L4.57 12.97L4.5 12L4.57 11L2.46 9.37C2.27 9.22 2.21 8.95 2.34 8.73L4.34 5.27C4.46 5.05 4.73 4.96 4.95 5.05L7.44 6.05C7.96 5.66 8.5 5.32 9.13 5.07L9.5 2.42C9.54 2.18 9.75 2 10 2H14C14.25 2 14.46 2.18 14.5 2.42L14.87 5.07C15.5 5.32 16.04 5.66 16.56 6.05L19.05 5.05C19.27 4.96 19.54 5.05 19.66 5.27L21.66 8.73C21.79 8.95 21.73 9.22 21.54 9.37L19.43 11L19.5 12L19.43 13L21.54 14.63C21.73 14.78 21.79 15.05 21.66 15.27L19.66 18.73C19.54 18.95 19.27 19.04 19.05 18.95L16.56 17.95C16.04 18.34 15.5 18.68 14.87 18.93L14.5 21.58C14.46 21.82 14.25 22 14 22H10ZM11.25 4L10.88 6.61C9.68 6.86 8.62 7.5 7.85 8.39L5.44 7.35L4.69 8.65L6.8 10.2C6.4 11.37 6.4 12.64 6.8 13.8L4.68 15.36L5.43 16.66L7.86 15.62C8.63 16.5 9.68 17.14 10.87 17.38L11.24 20H12.76L13.13 17.39C14.32 17.14 15.37 16.5 16.14 15.62L18.57 16.66L19.32 15.36L17.2 13.81C17.6 12.64 17.6 11.37 17.2 10.2L19.31 8.65L18.56 7.35L16.15 8.39C15.38 7.5 14.32 6.86 13.12 6.62L12.75 4H11.25Z"/>
         </svg>

@@ -20,6 +20,23 @@ function toggleTabContent () {
   }
 }
 
+$(window).on('load', function() {
+  const contentHeight = $('body').height();
+  const windowHeight = $(window).height();
+  const footer = $('footer');
+
+  if (contentHeight < windowHeight) {
+    footer.css({
+      'position': 'fixed',
+      'bottom': '0',
+      'left': '0',
+      'right': '0',
+    });
+  } else {
+    footer.css('position', 'static');
+  }
+});
+
 $(document).ready(function () {
   toggleTabContent();
 
