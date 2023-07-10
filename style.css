@@ -1147,12 +1147,6 @@ footer {
   display: none;
 }
 
-/* footer {
-  position: sticky;
-  bottom: 0;
-  right: 0;
-  left: 0;
-} */
 .footer {
   display: none;
 }
@@ -1921,8 +1915,12 @@ a.with-news::after {
 /*#endregion messagesPage*/
 
 /*#region messagesChat*/
-.chat_content {
-  width: 100%;
+.message-date p {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: #A6A6A6;
+  margin-bottom: 5px;
 }
 .message {
   width: 85%;
@@ -1949,6 +1947,10 @@ a.with-news::after {
   border-radius: 5px;
   overflow: hidden;
 }
+.owner_message .message_photo-wrapper {
+  height: 35px;
+  min-width: 35px;
+}
 .message_photo-wrapper img {
   object-fit: cover;
   height: 100%;
@@ -1960,6 +1962,69 @@ a.with-news::after {
   color: #2d2d2f;
 }
 
+
+.section--chat {
+  padding-bottom: 15px;
+}
+
+.chat_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+
+  height: 425px;
+}
+.main_chat-wrapper {
+  overflow-y: scroll;
+}
+.main_chat-wrapper::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.chat_content form {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-input {
+  display: block;
+  width: 100%;
+  padding: 10px 30px 10px 10px;
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  border: solid 1px #a6a6a6;
+  border-radius: 5px;
+  outline: none;
+}
+
+.chat-input:focus {
+  border: solid 1px #2d2d2f;
+}
+
+.chat_content form button {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  border: none;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  margin: 1px;
+}
+
+.chat_content form button:active {
+  background-color: var(--accent-color);
+}
+
 @media screen and (min-width: 768px) {
   .message {
     width: 75%;
@@ -1967,6 +2032,11 @@ a.with-news::after {
 }
 
 @media screen and (min-width: 1024px) {
-
+  .chat_content {
+    height: 600px;
+  }
+  .chat_content form button {
+    border-radius: 3px;
+  }
 }
 /*#endregion messagesChat*/

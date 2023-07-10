@@ -47,6 +47,14 @@ $(document).ready(function () {
   $(window).on('resize', function() {
     toggleTabContent();
   });
+
+  const chatInput = document.querySelector('.chat-input');
+
+  chatInput.addEventListener('input', function() {
+    this.style.height = 'auto';
+    this.style.height = this.scrollHeight + 'px';
+    this.scrollTop = 0;
+  });
 });
 
 
