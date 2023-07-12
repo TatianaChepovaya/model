@@ -940,6 +940,9 @@ footer {
 .navigation {
   display: none;
 }
+.account__settings {
+  width: 100%;
+}
 .account__label-wrapper {
   position: relative;
   display: block;
@@ -1033,6 +1036,22 @@ footer {
 
 .raiting {
   display: none;
+  margin-bottom: 20px;
+}
+.raiting p {
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+.raiting__stars {
+  display: flex;
+}
+.raiting__star {
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+}
+.raiting__star:last-child {
+  margin-right: 0;
 }
 
 .skills {
@@ -1146,6 +1165,12 @@ footer {
 .account__statistic {
   display: none;
 }
+.account__statistic-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 180px;
+}
 
 .footer {
   display: none;
@@ -1239,7 +1264,7 @@ a.with-news::after {
 
   .navigation {
     display: block;
-    margin-right: 35px;
+    margin-right: 50px;
   }
   .navigation-list ul {
     list-style: none;
@@ -1300,22 +1325,6 @@ a.with-news::after {
   .raiting {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-  }
-  .raiting p {
-    margin-right: 10px;
-    margin-bottom: 0;
-  }
-  .raiting__stars {
-    display: flex;
-  }
-  .raiting__star {
-    width: 14px;
-    height: 14px;
-    margin-right: 3px;
-  }
-  .raiting__star:last-child {
-    margin-right: 0;
   }
 
   .account__personal-text h3 {
@@ -1356,12 +1365,6 @@ a.with-news::after {
   }
   .account__statistic-row:first-child {
     margin-right: 50px;
-  }
-  .account__statistic-line {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 180px;
   }
 
   .skills__button {
@@ -2040,3 +2043,100 @@ a.with-news::after {
   }
 }
 /*#endregion messagesChat*/
+
+/*#region personalAccountModel*/
+.skills__cards--model .skills__card-title {
+  margin-bottom: 0;
+}
+.raiting--model {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.raiting__link {
+  margin-left: auto;
+  color: var(--light-grey-text-color);
+  font-size: 11px;
+  text-decoration: underline;
+}
+.account__personal-text--model h3 {
+  display: block;
+  width: 270px;
+  margin: 0 auto 10px;
+}
+.account__place-warning--model {
+  display: none;
+}
+.account__statistic--model {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  top: 590px;
+}
+.account__statistic--model .account__statistic-line {
+  width: 270px;
+}
+
+.subtitle--model {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.personal__info--model {
+  position: relative;
+  margin-bottom: 60px;
+}
+.skills--model {
+  position: relative;
+  margin-bottom: 230px;
+}
+.personal__info--model::after,
+.skills--model::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  display: block;
+  height: 1px;
+  background-color: var(--light-grey-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .skills__cards--model {
+    grid-template-columns: repeat(1, 300px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .account__statistic--model {
+    position: static;
+    transform: translateX(0);
+  }
+  .account__statistic--model h3 {
+    display: none;
+  }
+  .account__statistic {
+    margin-left: auto;
+  }
+  .account__place-warning--model {
+    display: block;
+  }
+  .subtitle--model {
+    text-align: left;
+  }
+  .personal__info--model {
+    margin-bottom: 30px;
+  }
+  .personal__info--model::after,
+  .skills--model::after {
+    display: none;
+  }
+}
+/*#endregion personalAccountModel*/
