@@ -50,11 +50,33 @@ $(document).ready(function () {
 
   const chatInput = document.querySelector('.chat-input');
 
-  chatInput.addEventListener('input', function() {
-    this.style.height = 'auto';
-    this.style.height = this.scrollHeight + 'px';
-    this.scrollTop = 0;
+  if (chatInput) {
+    chatInput.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = this.scrollHeight + 'px';
+      this.scrollTop = 0;
+    });
+  }
+
+  const openModalButtons = document.querySelectorAll('.open-modal');
+  const modalWindow = document.querySelector('.modal');
+  const modalContent = document.querySelector('.modal-info__content');
+
+  openModalButtons.forEach(openModalButton => {
+    openModalButton.addEventListener('click', function() {
+      modalWindow.classList.add('visible')
+    })
+  })
+
+  modalWindow.addEventListener('click', function(event) {
+    const isClickInsideModal = modalContent.contains(event.target);
+
+    if (!isClickInsideModal) {
+      modalWindow.classList.remove('visible');
+    }
   });
+
+
 });
 
 
