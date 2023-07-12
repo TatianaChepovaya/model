@@ -2252,7 +2252,11 @@ a.with-news::after {
 .offer__card-info-buttons,
 .offer__card-action-buttons {
   display: flex;
+  justify-content: space-between;
   gap: 8px;
+}
+.offer__card-action-buttons {
+  width: 200px;
 }
 .offer__card-action-buttons .application__card-actions-yes span:first-child {
   display: none;
@@ -2355,6 +2359,10 @@ a.with-news::after {
 }
 
 @media screen and (min-width: 1200px) {
+  .offer__card-action-buttons {
+    width: 200px;
+    justify-content: space-between;
+  }
   .offer__card-info {
     margin-right: 70px;
   }
@@ -2452,9 +2460,46 @@ a.with-news::after {
   background-repeat: no-repeat;
 }
 
+.offer__card-action-buttons p {
+  color: #d9d9d9;
+  padding: 7px 10px;
+  border: solid 1px #d9d9d9;
+  border-radius: 100px;
+}
+
+.offer__card-action-buttons.confirmed .application__card-actions-yes {
+  cursor: default;
+  pointer-events: none;
+}
+
+.offer__card-action-buttons.confirmed .application__card-actions-pay {
+  background-color: transparent;
+  border: solid 1px var(--accent-green-color);
+}
+
+.offer__card-action-buttons.rejected p {
+  margin-left: auto;
+  padding-right: 28px;
+  padding-left: 28px;
+}
+
+.offer__card-action-buttons.waiting span {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .modal-info__content {
     padding: 35px 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .offer__card-action-buttons.waiting span {
+    display: inline-block;
+  }
+  .offer__card-action-buttons.waiting .application__card-actions-no {
+    width: max-content;
+    padding-left: 7px;
+    padding-right: 7px;
   }
 }
 /*#endregion modal*/
