@@ -59,23 +59,60 @@ $(document).ready(function () {
   }
 
   const openModalButtons = document.querySelectorAll('.open-modal');
+  const closeModalButtons = document.querySelectorAll('.close-modal');
+  const openFilterButtons = document.querySelectorAll('.open-filter');
+  const openCardMasterButtons = document.querySelectorAll('.modal-master-card');
   const modalWindow = document.querySelector('.modal');
-  const modalContent = document.querySelector('.modal-info__content');
+  const modalContent = document.querySelectorAll('.content');
 
-  if (openModalButtons && modalWindow) {
+  function hideContent () {
+    modalContent.forEach(content => {
+      content.classList.remove('visible');
+    })
+  }
+  function chooseContent (contentClassName) {
+    const neededConentet = document.querySelector(`.${contentClassName}`);
+    neededConentet.classList.add('visible');
+  }
+
+  if (openModalButtons && modalWindow && openFilterButtons) {
     openModalButtons.forEach(openModalButton => {
       openModalButton.addEventListener('click', function() {
-        modalWindow.classList.add('visible')
+        hideContent();
+        modalWindow.classList.add('visible');
+        chooseContent('modal-info__content');
+      })
+    })
+
+    openFilterButtons.forEach(openFilterButton => {
+      openFilterButton.addEventListener('click', function() {
+        hideContent();
+        modalWindow.classList.add('visible');
+        chooseContent('filter__content');
+      })
+    })
+
+    openCardMasterButtons.forEach(openCardMasterButton => {
+        openCardMasterButton.addEventListener('click', function() {
+        hideContent();
+        modalWindow.classList.add('visible');
+        chooseContent('card-master__content');
       })
     })
   
     modalWindow.addEventListener('click', function(event) {
-      const isClickInsideModal = modalContent.contains(event.target);
-  
+      const isClickInsideModal = Array.from(modalContent).some(content => content.contains(event.target));
+    
       if (!isClickInsideModal) {
         modalWindow.classList.remove('visible');
       }
     });
+
+    closeModalButtons.forEach(closeModalButton => {
+      closeModalButton.addEventListener('click', function() {
+        modalWindow.classList.remove('visible');
+      })
+    })
   }
 
   
