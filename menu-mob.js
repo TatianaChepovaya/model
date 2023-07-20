@@ -115,8 +115,24 @@ $(document).ready(function () {
     })
   }
 
-  
+  const accordionButtons = document.querySelectorAll('.services__item-button');
 
+  if (accordionButtons) {
+    accordionButtons.forEach(accordionButton => {
+      accordionButton.addEventListener('click', function() {
+        const accordionContent = accordionButton.nextElementSibling;
+  
+        accordionButton.classList.toggle('visible');
+        accordionContent.classList.toggle('visible');
+  
+        if (accordionContent.classList.contains('visible')) {
+          accordionContent.style.height = `${ accordionContent.scrollHeight}px`;
+        } else {
+          accordionContent.style.height = '0';
+        }
+      });
+    });
+  }
 
 });
 
