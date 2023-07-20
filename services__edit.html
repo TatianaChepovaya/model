@@ -111,12 +111,12 @@
                 </a>
               </li>
               <li class="current">
-                <a href="#" class="with-news">
+                <a href="./services.html" class="with-news">
                   <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11 15H17V17H11V15ZM9 7H7V9H9V7ZM11 13H17V11H11V13ZM11 9H17V7H11V9ZM9 11H7V13H9V11ZM21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19C20.1 3 21 3.9 21 5ZM19 5H5V19H19V5ZM9 15H7V17H9V15Z"/>
                   </svg>
                 </a>
-                <a href="#">
+                <a href="./services.html">
                   Мої послуги
                 </a>
               </li>
@@ -162,392 +162,79 @@
               </li>
             </ul>
           </nav>
-          <div class="services__items">
-            <div class="services__item">
-              <button class="services__item-button">
-                <p>
-                  <strong>
-                    Класичний манікюр
-                  </strong>
-                </p>
-              </button>
-              <div class="services__item-content">
-                <div class="services__item-card">
-                  <div class="services__item-card-photo">
-                    <img src="./images/example.jpg" alt="example">
-                  </div>
-                  <div class="services__item-card-info">
-                    <p class="services__item-card-info-title">
-                      Класичний манікюр
-                    </p>
-                    <div class="services__item-card-info-date">
-                      <div>
-                        <p>
-                          Дата:
-                        </p>
-                        <p>
-                          не визначено
-                        </p>
-                      </div>
-                      <div>
-                        <p>
-                          Час:
-                        </p>
-                        <div class="time">
-                          <p>
-                            не визначено
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="services__item-card-switch">
-                    <label class="custom-checkbox">
-                      <input type="checkbox">
-                      <div></div>
-                    </label>
-                  </div>
-                  <div class="services__item-card-button">
-                    <a href="./services__edit.html">
-                      Редагувати
-                    </a>
+          <div class="services__form">
+            <form action="">
+              <div class="services__form-row--first">
+                <input type="text" placeholder="Назва послуги">
+                <div class="services__form-row--first-buttons">
+                  <button>
+                    Скасувати
+                  </button>
+                  <button>
+                    Зберегти зміни
+                  </button>
+                </div>
+              </div>
+              <div class="services__form-row--second">
+                <select name="">
+                  <option value="" selected disabled>Оберіть категорію послуги</option>
+                  <option value="">Манікюр</option>
+                  <option value="">Педікюр</option>
+                  <option value="">Мейк ап</option>
+                  <option value="">Брови, вії, нарощування</option>
+                </select>
+                <div>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" checked>
+                    <div></div>
+                  </label>
+                  <p>
+                    Відображати в пошуку
+                  </p>
+                </div>
+              </div>
+              <textarea name="" id="" placeholder="Опис послуги"></textarea>
+              <div class="services__form-row--third">
+                <div>
+                  <input type="date" placeholder="Дата">
+                  <div>
+                    <p>або</p>
+                    <input type="checkbox" checked>
+                    <p>будь-який час</p>
                   </div>
                 </div>
-                <div class="services__item-card">
-                  <div class="services__item-card-photo">
-                    <img src="./images/example.jpg" alt="example">
-                  </div>
-                  <div class="services__item-card-info">
-                    <p class="services__item-card-info-title">
-                      Класичний манікюр
-                    </p>
-                    <div class="services__item-card-info-date">
-                      <div>
-                        <p>
-                          Дата:
-                        </p>
-                        <p>
-                          не визначено
-                        </p>
-                      </div>
-                      <div>
-                        <p>
-                          Час:
-                        </p>
-                        <div class="time">
-                          <button>
-                            10:00
-                          </button>
-                          <button>
-                            11:00
-                          </button>
-                          <button class="not-available">
-                            12:00
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="services__item-card-switch">
-                    <label class="custom-checkbox">
-                      <input type="checkbox">
-                      <div></div>
-                    </label>
-                  </div>
-                  <div class="services__item-card-button">
-                    <a href="./services__edit.html">
-                      Редагувати
-                    </a>
+                <div>
+                  <input type="time" placeholder="Час">
+                  <div>
+                    <p>або</p>
+                    <input type="checkbox" checked>
+                    <p>будь-який час</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="services__item">
-              <button class="services__item-button">
+              <div class="services__form-row--fourth">
                 <p>
-                  <strong>
-                    Брови та вії
-                  </strong>
+                  Приклади робіт (фінальний результат)
                 </p>
-              </button>
-              <div class="services__item-content">
-                <div class="services__item-card">
-                  <div class="services__item-card-photo">
-                    <img src="./images/example.jpg" alt="example">
+                <div class="services__form-row--fourth-photos">
+                  <div>
+                    <img src="./images/example.jpg" alt="">
                   </div>
-                  <div class="services__item-card-info">
-                    <p class="services__item-card-info-title">
-                      Класичний манікюр
-                    </p>
-                    <div class="services__item-card-info-date">
-                      <div>
-                        <p>
-                          Дата:
-                        </p>
-                        <p>
-                          не визначено
-                        </p>
-                      </div>
-                      <div>
-                        <p>
-                          Час:
-                        </p>
-                        <div class="time">
-                          <p>
-                            не визначено
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                  <div>
+                    <img src="./images/example.jpg" alt="">
                   </div>
-                  <div class="services__item-card-switch">
-                    <label class="custom-checkbox">
-                      <input type="checkbox">
-                      <div></div>
-                    </label>
+                  <div>
+                    <img src="./images/example.jpg" alt="">
                   </div>
-                  <div class="services__item-card-button">
-                    <a href="./services__edit.html">
-                      Редагувати
-                    </a>
+                  <div>
+                    <img src="./images/example.jpg" alt="">
                   </div>
-                </div>
-                <div class="services__item-card">
-                  <div class="services__item-card-photo">
-                    <img src="./images/example.jpg" alt="example">
-                  </div>
-                  <div class="services__item-card-info">
-                    <p class="services__item-card-info-title">
-                      Класичний манікюр
-                    </p>
-                    <div class="services__item-card-info-date">
-                      <div>
-                        <p>
-                          Дата:
-                        </p>
-                        <p>
-                          не визначено
-                        </p>
-                      </div>
-                      <div>
-                        <p>
-                          Час:
-                        </p>
-                        <div class="time">
-                          <button>
-                            10:00
-                          </button>
-                          <button>
-                            11:00
-                          </button>
-                          <button class="not-available">
-                            12:00
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="services__item-card-switch">
-                    <label class="custom-checkbox">
-                      <input type="checkbox">
-                      <div></div>
-                    </label>
-                  </div>
-                  <div class="services__item-card-button">
-                    <a href="./services__edit.html">
-                      Редагувати
-                    </a>
-                  </div>
-                </div>
-                <div class="services__item-card">
-                  <div class="services__item-card-photo">
-                    <img src="./images/example.jpg" alt="example">
-                  </div>
-                  <div class="services__item-card-info">
-                    <p class="services__item-card-info-title">
-                      Класичний манікюр
-                    </p>
-                    <div class="services__item-card-info-date">
-                      <div>
-                        <p>
-                          Дата:
-                        </p>
-                        <p>
-                          не визначено
-                        </p>
-                      </div>
-                      <div>
-                        <p>
-                          Час:
-                        </p>
-                        <div class="time">
-                          <p>
-                            не визначено
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="services__item-card-switch">
-                    <label class="custom-checkbox">
-                      <input type="checkbox">
-                      <div></div>
-                    </label>
-                  </div>
-                  <div class="services__item-card-button">
-                    <a href="./services__edit.html">
-                      Редагувати
-                    </a>
-                  </div>
-                </div>
-                <div class="services__item-card">
-                  <div class="services__item-card-photo">
-                    <img src="./images/example.jpg" alt="example">
-                  </div>
-                  <div class="services__item-card-info">
-                    <p class="services__item-card-info-title">
-                      Класичний манікюр
-                    </p>
-                    <div class="services__item-card-info-date">
-                      <div>
-                        <p>
-                          Дата:
-                        </p>
-                        <p>
-                          не визначено
-                        </p>
-                      </div>
-                      <div>
-                        <p>
-                          Час:
-                        </p>
-                        <div class="time">
-                          <button>
-                            10:00
-                          </button>
-                          <button>
-                            11:00
-                          </button>
-                          <button class="not-available">
-                            12:00
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="services__item-card-switch">
-                    <label class="custom-checkbox">
-                      <input type="checkbox">
-                      <div></div>
-                    </label>
-                  </div>
-                  <div class="services__item-card-button">
-                    <a href="./services__edit.html">
-                      Редагувати
-                    </a>
-                  </div>
+                  <label>
+                    <input type="file">
+                  </label>
                 </div>
               </div>
-            </div>
-            <div class="services__item">
-              <button class="services__item-button">
-                <p>
-                  <strong>
-                    Мейк ап
-                  </strong>
-                </p>
-              </button>
-              <div class="services__item-content">
-                <div class="services__item-card">
-                  <div class="services__item-card-photo">
-                    <img src="./images/example.jpg" alt="example">
-                  </div>
-                  <div class="services__item-card-info">
-                    <p class="services__item-card-info-title">
-                      Класичний манікюр
-                    </p>
-                    <div class="services__item-card-info-date">
-                      <div>
-                        <p>
-                          Дата:
-                        </p>
-                        <p>
-                          не визначено
-                        </p>
-                      </div>
-                      <div>
-                        <p>
-                          Час:
-                        </p>
-                        <div class="time">
-                          <p>
-                            не визначено
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="services__item-card-switch">
-                    <label class="custom-checkbox">
-                      <input type="checkbox">
-                      <div></div>
-                    </label>
-                  </div>
-                  <div class="services__item-card-button">
-                    <a href="./services__edit.html">
-                      Редагувати
-                    </a>
-                  </div>
-                </div>
-                <div class="services__item-card">
-                  <div class="services__item-card-photo">
-                    <img src="./images/example.jpg" alt="example">
-                  </div>
-                  <div class="services__item-card-info">
-                    <p class="services__item-card-info-title">
-                      Класичний манікюр
-                    </p>
-                    <div class="services__item-card-info-date">
-                      <div>
-                        <p>
-                          Дата:
-                        </p>
-                        <p>
-                          не визначено
-                        </p>
-                      </div>
-                      <div>
-                        <p>
-                          Час:
-                        </p>
-                        <div class="time">
-                          <button>
-                            10:00
-                          </button>
-                          <button>
-                            11:00
-                          </button>
-                          <button class="not-available">
-                            12:00
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="services__item-card-switch">
-                    <label class="custom-checkbox">
-                      <input type="checkbox">
-                      <div></div>
-                    </label>
-                  </div>
-                  <div class="services__item-card-button">
-                    <a href="./services__edit.html">
-                      Редагувати
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
