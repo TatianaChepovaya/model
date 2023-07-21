@@ -1395,6 +1395,35 @@ a.with-news::after {
   min-height: var(--min-height-mobile);
 }
 
+.content_wrapper {
+  width: 100%;
+}
+.services__links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.services__links a {
+  border-radius: 100px;
+  padding: 7px 14px;
+  transition: all 0.4s;
+}
+.services__links a:first-child {
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+}
+.services__links a:first-child:hover {
+  background-color: transparent;
+}
+.services__links a:last-child {
+  border: 1px solid rgba(166, 166, 166, 1);
+  background-color: rgba(245, 245, 245, 1);
+}
+.services__links a:last-child:hover {
+  background-color: transparent;
+}
+
 .services__item-content {
   margin-bottom: 10px;
   height: 0;
@@ -1439,7 +1468,8 @@ a.with-news::after {
 
 .services__item-card {
   display: grid;
-  grid-template-columns: 50px 1fr 35px max-content;
+  grid-template-columns: 50px 1fr;
+
   align-items: center;
   gap: 15px;
   margin-bottom: 20px;
@@ -1468,9 +1498,9 @@ a.with-news::after {
   margin-bottom: 15px;
 }
 .services__item-card-info-date {
-  display: grid;
-  grid-template-columns: 135px 1fr;
-  gap: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .services__item-card-info-date div {
   display: flex;
@@ -1485,7 +1515,13 @@ a.with-news::after {
   display: flex;
   align-items: center;
   gap: 10px;
+  max-width: 200px;
+  overflow-y: scroll;
 }
+.services__item-card-info-date div.time::-webkit-scrollbar {
+  height: 0.5em ;
+}
+
 .services__item-card-info-date div.time button {
   background-color: transparent;
   border-radius: 100px;
@@ -1495,6 +1531,15 @@ a.with-news::after {
 }
 .services__item-card-info-date div.time button.not-available {
   background-color: rgba(217, 217, 217, 1);
+}
+
+.services__item-card-switch,
+.services__item-card-button {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.services__item-card-button {
+  margin-left: 45px;
 }
 
 .custom-checkbox {
@@ -1509,6 +1554,10 @@ a.with-news::after {
 .custom-checkbox input {
   position: absolute;
   opacity: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 .custom-checkbox div {
   border-radius: 50%;
@@ -1527,6 +1576,7 @@ a.with-news::after {
 }
 
 .services__item-card-button a {
+  display: inline-block;
   border-radius: 100px;
   border: 1px solid rgba(166, 166, 166, 1);
   color: rgba(166, 166, 166, 1);
@@ -1537,7 +1587,6 @@ a.with-news::after {
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
-
 
 .services__form {
   width: 100%;
@@ -1567,18 +1616,21 @@ a.with-news::after {
 
 .services__form-row--first {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  gap: 25px;
+  width: 100%;
   margin-bottom: 25px;
 }
+
 .services__form-row--first input {
-  max-width: 490px;
+  max-width: 100%;
 }
 
 .services__form-row--first-buttons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
 }
 .services__form-row--first-buttons button {
   border-radius: 100px;
@@ -1600,6 +1652,8 @@ a.with-news::after {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 .services__form-row--second select {
   width: max-content;
@@ -1613,8 +1667,9 @@ a.with-news::after {
 .services__form-row--third {
   display: flex;
   align-items: center;
-  gap: 45px;
+  gap: 25px;
   margin-bottom: 25px;
+  flex-wrap: wrap;
 }
 .services__form-row--third input {
   width: 260px;
@@ -1622,6 +1677,7 @@ a.with-news::after {
 }
 .services__form-row--third div div {
   display: flex;
+  color: var(--light-grey-text-color);
 }
 .services__form-row--third div div input[type="checkbox"] {
   width: max-content;
@@ -1684,6 +1740,53 @@ a.with-news::after {
 @media screen and (min-width: 768px) {
   .services {
     min-height: var(--min-height-tablet);
+  }
+
+  .services__item-card {
+    display: grid;
+    grid-template-columns: 50px 1fr 35px max-content;
+    align-items: center;
+  }
+
+  .services__item-card-info-date {
+    display: grid;
+    grid-template-columns: 135px 1fr;
+    gap: 35px;
+  }
+
+  .services__item-card-switch,
+  .services__item-card-button {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .services__item-card-button {
+    margin-left: 0;
+  }
+  .services__item-card-info-date div.time {
+    max-width: 100%;
+  }
+
+  .services__links {
+    gap: 30px;
+  }
+
+  .services__form-row--first {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .services__form-row--first input {
+    max-width: 450px;
+  }
+
+  .services__form-row--first-buttons {
+    justify-content: flex-end;
+    width: max-content;
+    gap: 10px;
+  }
+
+  .services__form-row--third {
+    gap: 45px;
   }
 }
 
