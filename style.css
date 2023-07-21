@@ -36,6 +36,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p,
 ul {
   margin: 0;
@@ -875,6 +876,16 @@ footer {
     display: flex;
     justify-content: space-between;
   }
+}
+
+input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
 /*#region chatButton*/
@@ -3362,15 +3373,137 @@ a.location::before {
 
 /*#endregion settings*/
 
-input[type="file"] {
+/*#region general*/
+.tariff {
+  color: rgba(45, 45, 47, 1);
+}
+.tariff h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tariff__article h3 {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+.tariff__article h3::after {
+  content: '';
+  position: absolute;
+  top: -42%;
+  display: block;
+  width: 100%;
+  height: 200%;
+  background-image: url('./images/title__decorator.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+.tariff__cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-self: stretch;
+  height: 100%;
+  min-height: 380px;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.tariff__card {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 187, 162, 1);
+  padding: 25px 15px 35px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tariff__card-part h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.tariff__card-part ul {
+
+}
+.tariff__card-part ul li {
+  font-size: 14px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+}
+.tariff__card-part ul li:last-child {
+  margin-bottom: 0;
+}
+.tariff__card-part ul li::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-image: url('./images/ul__dot.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
+
+.tariff__card-part p {
+  text-align: center;
+  color: rgba(166, 166, 166, 1);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.tariff__card-part button {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  padding: 15px 35px;
+  border-radius: 100px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.tariff__card-part button:hover {
+  background-color: #fff;
+}
+.tariff__article {
+  margin-bottom: 90px;
+}
+.tariff__article:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 640px) {
+  .tariff__cards {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 35px;
+    row-gap: 25px;
+    min-height: 450px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .tariff__cards {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 70px;
+    row-gap: 35px;
+    min-height: 500px;
+  }
+  .tariff__card {
+    flex-basis: calc(33.33% - 70px);
+  }
+}
+/*#endregion general*/
 
 
 
