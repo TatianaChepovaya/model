@@ -3143,6 +3143,10 @@ a.location::before {
 /*#endregion searchMaster*/
 
 /*#region settings*/
+.settings h2,
+.settings p {
+  text-align: left;
+}
 .setting__part {
   margin-bottom: 35px;
 }
@@ -3220,8 +3224,153 @@ a.location::before {
   background-color: #fff;
   color: var(--accent-color);
 }
+
+.account__label p {
+  text-align: center;
+}
+.account__edit-row--first {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.account__edit-row-item {
+  width: 100%;
+}
+.account__edit-row-item p {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.account__edit-row-item input,
+.account__edit-row-item select {
+  display: block;
+  border-radius: 100px;
+  border: 1px solid rgba(166, 166, 166, 1);
+  padding: 7px 17px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.account__edit-row-item input:last-child,
+.account__edit-row-item select:last-child {
+  margin-bottom: 0;
+}
+.account__edit-row-item input:focus,
+.account__edit-row-item select:focus {
+  border-color: var(--accent-color);
+}
+.account__edit-row-item:nth-of-type(2) input,
+.account__edit-row-item:nth-of-type(2) select,
+.account__edit-row--second select {
+  width: 100%;
+}
+.account__edit-row-item:nth-of-type(3) input,
+.account__edit-row-item:nth-of-type(3) select {
+  width: 100%;
+}
+.account__edit-row--second {
+  margin-bottom: 40px;
+}
+.account__edit-row-item-text {
+  margin-bottom: 30px;
+}
+.account__edit-row-item-text p:last-child {
+  font-weight: 400;
+}
+
+.account__edit-row-item-lable-wrappers {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.account__edit-row-item-lable-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.account__edit-row-item-lable-wrapper p {
+  max-width: 170px;
+}
+.account__edit-row-item-lable-wrapper div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.account__edit-row-item-lable-wrapper div label {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  position: relative;
+  background-color: rgba(217, 217, 217, 1);
+  cursor: pointer;
+}
+.account__edit-row-item-lable-wrapper div label::after {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-51%, -51%);
+  font-size: 36px;
+}
+.account__edit-row-item-photos {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.account__edit-row-item-lable-wrapper div img {
+  border-radius: 4px;
+  border: 1px solid rgba(166, 166, 166, 1);
+  width: 50px;
+  height: 50px;
+}
+
+.account__edit-row--first .account__edit-row-item:first-child {
+  width: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .account__edit-row--first {
+    flex-direction: row;
+  }
+  .account__edit-row-item-lable-wrappers {
+    flex-direction: row;
+  }
+  .account__edit-row-item-lable-wrappers {
+    gap: 95px;
+  }
+  .account__edit-row-item:nth-of-type(2) input,
+  .account__edit-row-item:nth-of-type(2) select,
+  .account__edit-row--second select {
+    width: 205px;
+  }
+  .account__edit-row-item:nth-of-type(3) input,
+  .account__edit-row-item:nth-of-type(3) select {
+    width: 275px;
+  }
+  .account__edit-row--first {
+    width: 95%;
+  }
+  .account__edit-row-item {
+    width: auto;
+  }
+}
+
 /*#endregion settings*/
 
+input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
 
 
 

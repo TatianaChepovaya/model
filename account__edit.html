@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Settings</title>
+    <title>Edit personal account</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -169,91 +169,122 @@
           </nav>
           <div class="content_wrapper">
             <form action="" class="setting__form">
-              <div class="setting__part">
-                <h4>
-                  Головне
-                </h4>
-                <label>
-                  <input type="checkbox">
-                  Відображати профіль в пошуку
-                </label>
-                <label>
-                  <input type="checkbox">
-                  Дозволити відправляти мені повідомлення
-                </label>
+              <div class="account__edit-row--first">
+                <div class="account__edit-row-item">
+                  <p>
+                    Моє фото
+                  </p>
+                  <label class="account__label-wrapper">
+                    <div class="account__label">
+                      <img src="./images/upload-file.svg" alt="Upload file">
+                      <p>
+                        <em>
+                          Завантажте Ваше фото
+                        </em>
+                      </p>
+                    </div>
+                    <input type="file" class="upload-file">
+                  </label>
+                </div>
+                <div class="account__edit-row-item">
+                  <p>
+                    Ім’я
+                  </p>
+                  <input type="text" value="Світлана Шевченко">
+                  <input type="date">
+                </div>
+                <div class="account__edit-row-item">
+                  <p>
+                    Адреса
+                  </p>
+                  <select name="">
+                    <option value="" selected disabled>Область</option>
+                    <option value="">Київська</option>
+                    <option value="">Чернігівська</option>
+                    <option value="">Одеська</option>
+                    <option value="">Львівська</option>
+                    <option value="">Черкаська</option>
+                    <option value="">Харківська</option>
+                  </select>
+                  <select name="">
+                    <option value="" selected disabled>Місто</option>
+                    <option value="">Київ</option>
+                    <option value="">Чернігів</option>
+                    <option value="">Одеса</option>
+                    <option value="">Львів</option>
+                    <option value="">Черкаси</option>
+                    <option value="">Харків</option>
+                  </select>
+                  <input type="text" placeholder="Адреса (вулиця, дім)">
+                </div>
               </div>
-              <div class="setting__part">
-                <h4>
-                  Сповіщення
-                </h4>
-                <label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <div></div>
-                  </label>
-                  Отримувати повідомлення на E-mail
-                </label>
-                <label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <div></div>
-                  </label>
-                  Дозволити інформувати в месенджерах (Telegram| Viber)
-                </label>
+              <div class="account__edit-row--second">
+                <div class="account__edit-row-item">
+                  <p>
+                    Основний напрямок діяльності
+                  </p>
+                  <select name="">
+                    <option value="" selected>Нігтьовий сервіс</option>
+                    <option value="">Нарощування</option>
+                    <option value="">Мейк ап</option>
+                    <option value="">Зачіски</option>
+                    <option value="">Брови</option>
+                  </select>
+                </div>
               </div>
-              <div class="setting__part">
-                <h4>
-                  Просування
-                </h4>
-                <label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <div></div>
-                  </label>
-                  Пошук на платформі
-                </label>
-                <label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <div></div>
-                  </label>
-                  Група телеграм
-                </label>
-                <label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <div></div>
-                  </label>
-                  Facebook
-                </label>
-              </div>
-              <div class="setting__part">
-                <h4>
-                  Безпека
-                </h4>
-                <p>
-                  Зміна пароля
-                </p>
-                <input type="password" placeholder="Старий пароль">
-                <input type="password" placeholder="Новий пароль">
-                <a href="">
-                  Не пам’ятаю старий пароль
-                </a>
-                <p>
-                  Зміна основної пошти (Email)
-                </p>
-                <input type="email" placeholder="Поточна пошта">
-                <input type="email" placeholder="Нова пошта">
-                <p>
-                  Двохфакторна авторизація
-                </p>
-                <label>
-                  <input type="checkbox">
-                  Ввімкнути 2FA авторизацію
-                </label>
-                <a href="">
-                  Це посилить захист аккаунту
-                </a>
+              <div class="account__edit-row--third">
+                <div class="account__edit-row-item">
+                  <div class="account__edit-row-item-text">
+                    <p>
+                      Верифікація
+                    </p>
+                    <p>
+                      <em>
+                        Для проходження верифікації, будь ласка завантажте необхідні документи.
+                      </em>
+                    </p>
+                  </div>
+                  <div class="account__edit-row-item-lable-wrappers">
+                    <div class="account__edit-row-item-lable-wrapper">
+                      <p>
+                        Паспорт / водійське посвідчення
+                      </p>
+                      <div>
+                        <div class="account__edit-row-item-photos">
+                        </div>
+                        <label>
+                          <input type="file">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="account__edit-row-item-lable-wrapper">
+                      <p>
+                        Сертифікат/ сертифікати основного напрямку діяльності
+                      </p>
+                      <div>
+                        <div class="account__edit-row-item-photos">
+                          <img src="./images/certificed.jpg" alt="">
+                          <img src="./images/certificed.jpg" alt="">
+                        </div>
+                        <label>
+                          <input type="file">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="account__edit-row-item-lable-wrapper">
+                      <p>
+                        Додаткова інформація (за бажанням)
+                      </p>
+                      <div>
+                        <div class="account__edit-row-item-photos">
+                        </div>
+                        <label>
+                          <input type="file">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <button type="submit">
                 Зберегти зміни

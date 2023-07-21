@@ -134,6 +134,19 @@ $(document).ready(function () {
     });
   }
 
+  const personalAccountCertificatePhotos = document.querySelectorAll('.account__edit-row-item-photos');
+
+  if (personalAccountCertificatePhotos) {
+    personalAccountCertificatePhotos.forEach(personalAccountCertificatePhoto => {
+      const numberOfChildren = personalAccountCertificatePhoto.children.length;
+
+      if (numberOfChildren === 0) {
+        personalAccountCertificatePhoto.style.marginRight = 0;
+      } else {
+        personalAccountCertificatePhoto.style.marginRight = `${20}px`;
+      }
+    })
+  }
 });
 
 
