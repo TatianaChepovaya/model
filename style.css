@@ -3142,6 +3142,85 @@ a.location::before {
 }
 /*#endregion searchMaster*/
 
+/*#region settings*/
+.setting__part {
+  margin-bottom: 35px;
+}
+.setting__part:last-of-type {
+  margin-bottom: 40px;
+}
+.setting__part h4 {
+  margin-bottom: 25px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.setting__part:last-of-type h4 {
+  margin-bottom: 15px;
+}
+.setting__part > label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+.setting__part > label:last-child {
+  margin-bottom: 0;
+}
+.setting__part label > input {
+  margin: 0;
+}
+.setting__part p {
+  margin-bottom: 7px;
+  color: rgba(166, 166, 166, 1);
+  font-weight: 700;
+}
+.setting__part a {
+  display: block;
+  margin-bottom: 20px;
+  color: rgba(166, 166, 166, 1);
+  font-style: italic;
+  text-decoration: underline;
+  transition: all 0.4s;
+}
+.setting__part a:last-child {
+  margin-bottom: 0;
+}
+.setting__part a:hover {
+  color: var(--accent-color);
+}
+.setting__part > input {
+  display: block;
+  border-radius: 100px;
+  padding: 7px 17px;
+  width: 100%;
+  max-width: 260px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(166, 166, 166, 1);
+  outline: none;
+}
+.setting__part > input:nth-of-type(2) {
+  margin-bottom: 7px;
+}
+.setting__part > input:focus {
+  border: 1px solid var(--accent-color);
+}
+.setting__part:last-of-type label {
+  color: rgba(166, 166, 166, 1);
+  margin-bottom: 10px;
+}
+.setting__form button {
+  border-radius: 100px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  padding: 7px 17px;
+  transition: all 0.4s;
+}
+.setting__form button:hover {
+  background-color: #fff;
+  color: var(--accent-color);
+}
+/*#endregion settings*/
 
 
 
