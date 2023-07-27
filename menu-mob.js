@@ -37,6 +37,8 @@ $(window).on('load', function() {
   }
 });
 
+
+
 $(document).ready(function () {
   toggleTabContent();
 
@@ -146,6 +148,48 @@ $(document).ready(function () {
         personalAccountCertificatePhoto.style.marginRight = `${20}px`;
       }
     })
+  }
+
+  const moreNewsButton = document.querySelector('.more__news');
+  const newsContent = document.querySelector('.news__container');
+  const newsContentHeight = window.innerWidth <= 500
+    ? '1345px'
+    : '1560px';
+
+  if (moreNewsButton && newsContent) {
+    moreNewsButton.addEventListener('click', () => {
+      newsContent.classList.toggle('visible');
+
+      const isHidden = newsContent.classList.contains('visible');
+
+      if (!isHidden) {
+        moreNewsButton.textContent = 'Більше новин';
+        newsContent.style.maxHeight = newsContentHeight;
+      } else {
+        moreNewsButton.textContent = 'Менше новин';
+        newsContent.style.maxHeight = `${newsContent.scrollHeight}px`;
+      }
+    })
+  }
+
+  if (window.innerWidth < 768) {
+    $('.another__news-content-wrapper').slick({
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
   }
 });
 
