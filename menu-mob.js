@@ -63,42 +63,45 @@ $(document).ready(function () {
   const openModalButtons = document.querySelectorAll('.open-modal');
   const closeModalButtons = document.querySelectorAll('.close-modal');
   const openFilterButtons = document.querySelectorAll('.open-filter');
+  const openDeleteConfirmationButtons = document.querySelectorAll('.open-delete-confirmation');
   const openCardMasterButtons = document.querySelectorAll('.modal-master-card');
   const modalWindow = document.querySelector('.modal');
   const modalContent = document.querySelectorAll('.content');
 
-  function hideContent () {
+  function chooseContent (contentClassName) {
     modalContent.forEach(content => {
       content.classList.remove('visible');
     })
-  }
-  function chooseContent (contentClassName) {
+    modalWindow.classList.add('visible');
+
     const neededConentet = document.querySelector(`.${contentClassName}`);
+
     neededConentet.classList.add('visible');
   }
 
   if (openModalButtons && modalWindow && openFilterButtons) {
     openModalButtons.forEach(openModalButton => {
       openModalButton.addEventListener('click', function() {
-        hideContent();
-        modalWindow.classList.add('visible');
         chooseContent('modal-info__content');
       })
     })
 
     openFilterButtons.forEach(openFilterButton => {
       openFilterButton.addEventListener('click', function() {
-        hideContent();
-        modalWindow.classList.add('visible');
         chooseContent('filter__content');
       })
     })
 
     openCardMasterButtons.forEach(openCardMasterButton => {
         openCardMasterButton.addEventListener('click', function() {
-        hideContent();
-        modalWindow.classList.add('visible');
         chooseContent('card-master__content');
+      })
+    })
+
+    openDeleteConfirmationButtons.forEach(openDeleteConfirmationButton => {
+      openDeleteConfirmationButton.addEventListener('click', function(event) {
+        event.preventDefault()
+        chooseContent('delete-confirmation__content');
       })
     })
   

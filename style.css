@@ -1417,29 +1417,40 @@ a.with-news::after {
 }
 .services__links {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 15px;
   margin-bottom: 30px;
 }
-.services__links a {
-  border-radius: 100px;
+
+.services__links-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
+}
+.services__links-block a {
+  border: 1px solid rgba(166, 166, 166, 1);
+  background-color: rgba(245, 245, 245, 1);
+  min-width: 130px;
+  text-align: center;
   padding: 7px 14px;
   transition: all 0.4s;
 }
-.services__links a:first-child {
+.services__links-block a:hover {
+  background-color: transparent;
+}
+.services__links-block:last-child a {
+  border-radius: 100px;
+}
+.services__links-block a.active {
   border: 1px solid var(--accent-color);
   background-color: var(--accent-color);
 }
-.services__links a:first-child:hover {
+.services__links-block a.active:hover {
   background-color: transparent;
 }
-.services__links a:last-child {
-  border: 1px solid rgba(166, 166, 166, 1);
-  background-color: rgba(245, 245, 245, 1);
-}
-.services__links a:last-child:hover {
-  background-color: transparent;
-}
+
 
 .services__item-content {
   margin-bottom: 10px;
@@ -1757,6 +1768,66 @@ a.with-news::after {
 }
 
 
+.services__group-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  background-color: rgba(245, 245, 245, 1);
+}
+.services__group-list li:last-child {
+  margin-bottom: 0;
+}
+.services__group-list li p {
+  font-weight: 600;
+}
+.services__group-list li div {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.services__group-list li input {
+  display: block;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+}
+.services__group-list li a {
+  display: block;
+  padding: 5px 10px;
+  color: rgba(166, 166, 166, 1);
+  border: 1px solid rgba(166, 166, 166, 1);
+  border-radius: 100px;
+  background-color: #fff;
+}
+
+.open-delete-confirmation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin-left: auto;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: transparent;
+  color: rgba(255, 0, 0, 1);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.open-delete-confirmation:hover {
+  border-color: rgba(255, 0, 0, 1);
+}
+
+@media screen and (min-width: 640px) {
+  .services__links-block {
+    flex-direction: row;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .services {
@@ -3931,6 +4002,50 @@ a.location::before {
   width: 50%;
 }
 
+.delete-confirmation__content {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+.delete-confirmation__content p {
+  text-align: center;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.delete-confirmation__content div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+.delete-confirmation__content div button {
+  font-size: 16px;
+  display: block;
+  border-radius: 4px;
+  padding: 5px 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.delete-confirmation__content div button.no {
+  border: solid 1px var(--accent-color);
+  background-color: var(--accent-color);
+}
+.delete-confirmation__content div button.yes {
+  border: solid 1px var(--accent-green-color);
+  background-color: var(--accent-green-color);
+}
+.delete-confirmation__content div button:hover {
+  background-color: transparent;
+}
+.delete-confirmation__content div button.no:hover {
+  color: var(--accent-color);
+}
+.delete-confirmation__content div button.yes:hover {
+  color: var(--accent-green-color);
+}
 
 @media screen and (max-width: 480px) {
   .main-info-photo {
