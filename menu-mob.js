@@ -175,6 +175,7 @@ $(document).ready(function () {
   if (window.innerWidth < 768) {
     $('.another__news-content-wrapper').slick({
       infinite: false,
+      arrows: false,
       responsive: [
         {
           breakpoint: 768,

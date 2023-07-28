@@ -3723,48 +3723,6 @@ a.location::before {
   background-color: #ffffff;
 }
 
-/* Стрелка */
-.another__news-content-wrapper .slick-arrow {
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  background-color: rgba(166, 166, 166, 0.8);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-100%);
-  z-index: 5;
-  cursor: pointer;
-  font-size: 0;
-}
-/* Стрелка влево */
-.another__news-content-wrapper .slick-arrow.slick-prev {
-  left: 0;
-}
-.another__news-content-wrapper .slick-arrow.slick-next {
-  right: 0;
-}
-.another__news-content-wrapper .slick-arrow.slick-prev::after {
-  content: '<';
-}
-.another__news-content-wrapper .slick-arrow.slick-next::after {
-  content: '>';
-}
-.another__news-content-wrapper .slick-arrow.slick-prev::after,
-.another__news-content-wrapper .slick-arrow.slick-next::after {
-  font-size: 28px;
-  color: #000000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-45%, -45%);
-}
-.another__news-content-wrapper .slick-arrow.slick-disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 @media screen and (min-width: 500px) {
   .news__article-content-info-photo {
     height: 215px;
