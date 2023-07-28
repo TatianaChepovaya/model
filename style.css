@@ -976,7 +976,7 @@ input[type="file"] {
   margin-bottom: 10px;
 }
 .account__label p {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 .account__label-wrapper input {
   position: absolute;
@@ -1288,6 +1288,7 @@ a.with-news::after {
     align-items: center;
     justify-content: flex-start;
     border: solid 1px var(--main-grey-color);
+    transition: all 0.4s;
   }
   .navigation-list li.current {
     background-color: var(--main-grey-color);
@@ -1308,6 +1309,10 @@ a.with-news::after {
     width: 100%;
     padding: 5px 10px;
     font-weight: 700;
+  }
+  .navigation-list li:hover {
+    background-color: var(--main-grey-color);
+    color: #ffffff;
   }
 
   .title--account,
@@ -1331,6 +1336,7 @@ a.with-news::after {
   }
   .account__label-wrapper p {
     text-align: center;
+    margin-bottom: 0;
   }
 
   .raiting {
@@ -1731,9 +1737,13 @@ a.with-news::after {
 .services__form-row--fourth label::after {
   content: '+';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-51%, -51%);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
   font-size: 36px;
   color: #000000;
 }
@@ -3323,9 +3333,14 @@ a.location::before {
 .account__edit-row-item-lable-wrapper div label::after {
   content: '+';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-51%, -51%);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  transform: translateY(-2px);
   font-size: 36px;
 }
 .account__edit-row-item-photos {
