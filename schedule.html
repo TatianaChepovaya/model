@@ -94,18 +94,18 @@
   <main>
     <section class="section account">
       <div class="container">
-        <h2 class="title title--account">
-          Це ваш кабінет
-        </h2>
-        <p>
-          <em>
-            Заповніть особисті дані та розпочинайте пошук
-          </em>
-        </p>
+        <div class="schedule__up-wrapper">
+          <h2 class="title title--account">
+            Це ваш кабінет
+          </h2>
+          <button class="">
+            Додати запис
+          </button>
+        </div>
         <div class="main-content">
           <nav class="navigation">
             <ul class="navigation-list">
-              <li class="current">
+              <li>
                 <a href="./personal__account.html">
                   <svg width="24" height="24" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 6C11.4696 6 10.9609 6.21071 10.5858 6.58579C10.2107 6.96086 10 7.46957 10 8C10 8.53043 10.2107 9.03914 10.5858 9.41421C10.9609 9.78929 11.4696 10 12 10C12.5304 10 13.0391 9.78929 13.4142 9.41421C13.7893 9.03914 14 8.53043 14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6ZM12 13C14.67 13 20 14.33 20 17V20H4V17C4 14.33 9.33 13 12 13ZM12 14.9C9.03 14.9 5.9 16.36 5.9 17V18.1H18.1V17C18.1 16.36 14.97 14.9 12 14.9Z"/>
@@ -125,7 +125,7 @@
                   Мої послуги
                 </a>
               </li>
-              <li>
+              <li class="current">
                 <a href="./schedule.html">
                   <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.10714 0.9375C6.10714 0.417969 5.67723 0 5.14286 0C4.60848 0 4.17857 0.417969 4.17857 0.9375V2.5H2.57143C1.15313 2.5 0 3.62109 0 5V17.5C0 18.8789 1.15313 20 2.57143 20H15.4286C16.8469 20 18 18.8789 18 17.5V5C18 3.62109 16.8469 2.5 15.4286 2.5H13.8214V0.9375C13.8214 0.417969 13.3915 0 12.8571 0C12.3228 0 11.8929 0.417969 11.8929 0.9375V2.5H6.10714V0.9375ZM1.92857 7.5H5.14286V9.6875H1.92857V7.5ZM1.92857 11.5625H5.14286V14.0625H1.92857V11.5625ZM7.07143 11.5625H10.9286V14.0625H7.07143V11.5625ZM12.8571 11.5625H16.0714V14.0625H12.8571V11.5625ZM16.0714 9.6875H12.8571V7.5H16.0714V9.6875ZM16.0714 15.9375V17.5C16.0714 17.8438 15.7821 18.125 15.4286 18.125H12.8571V15.9375H16.0714ZM10.9286 15.9375V18.125H7.07143V15.9375H10.9286ZM5.14286 15.9375V18.125H2.57143C2.21786 18.125 1.92857 17.8438 1.92857 17.5V15.9375H5.14286ZM10.9286 9.6875H7.07143V7.5H10.9286V9.6875Z"/>
@@ -177,321 +177,523 @@
               </li>
             </ul>
           </nav>
-          <div class="account__settings">
-            <div class="personal__info">
-              <label class="account__label-wrapper">
-                <div class="account__label">
-                  <img src="./images/upload-file.svg" alt="Upload file">
+          <div class="schedule">
+            <ul class="schedule-time-list">
+              <li>
+                7:00
+              </li>
+              <li>
+                7:30
+              </li>
+              <li>
+                8:00
+              </li>
+              <li>
+                8:30
+              </li>
+              <li>
+                9:00
+              </li>
+              <li>
+                9:30
+              </li>
+              <li>
+                10:00
+              </li>
+              <li>
+                10:30
+              </li>
+              <li>
+                11:00
+              </li>
+              <li>
+                11:30
+              </li>
+              <li>
+                12:00
+              </li>
+              <li>
+                12:30
+              </li>
+              <li>
+                13:00
+              </li>
+              <li>
+                13:30
+              </li>
+              <li>
+                14:00
+              </li>
+              <li>
+                14:30
+              </li>
+              <li>
+                15:00
+              </li>
+              <li>
+                15:30
+              </li>
+              <li>
+                16:00
+              </li>
+              <li>
+                16:30
+              </li>
+              <li>
+                17:00
+              </li>
+              <li>
+                17:30
+              </li>
+              <li>
+                18:00
+              </li>
+              <li>
+                18:30
+              </li>
+              <li>
+                19:00
+              </li>
+              <li>
+                19:30
+              </li>
+              <li>
+                20:00
+              </li>
+              <li>
+                20:30
+              </li>
+              <li>
+                21:00
+              </li>
+            </ul>
+            <div class="schedule__content">
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
                   <p>
-                    <em>
-                      Завантажте Ваше фото
-                    </em>
+                    Понеділок
+                  </p>
+                  <p>
+                    20.06
                   </p>
                 </div>
-                <input type="file" class="upload-file">
-              </label>
-              <div class="account__personal-text">
-                <div class="raiting">
-                  <p>
-                    <em>
-                      Рейтинг:
-                    </em>
-                  </p>
-                  <div class="raiting__stars">
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                    <div class="raiting__star">
-                      <img src="./images/star.svg" alt="Star">
-                    </div>
-                  </div>
-                </div>
-                <h3>
-                  Name Surname
-                </h3>
-                <div class="account__place">
-                  <div class="account__place-change">
-                    <a href="https://goo.gl/maps/ZCoyezJ184Ae24rv5" target="_blank">
-                      Київська область, м.Київ,
-                    </a>
-                    <input type="text" placeholder="вулиця не вказана">
-                  </div>
-                  <div class="account__place-warning">
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_1530_to_1930">
                     <p>
-                      <em>
-                        ви можете уточнити адресу зараз або при створенні заявки на модель
-                      </em>
+                      7:30 - 9:30
                     </p>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
+                  </div>
+                  <div class="schedule__content-row-info-card from_1200_to_1300">
+                    <p>
+                      12:00 - 14:30
+                    </p>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
                   </div>
                 </div>
               </div>
-              <div class="account__statistic">
-                <div class="account__statistic-row">
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Запрошено моделей:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        11
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Вдалі зустрічі:
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        6
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Позитивні відгуки (3+):
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        15
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Негативні відгуки (1-2):
-                      </em>
-                    </p>
-                    <p>
-                      <em>
-                        0
-                      </em>
-                    </p>
-                  </div>
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
+                  <p>
+                    Вівторок
+                  </p>
+                  <p>
+                    21.06
+                  </p>
                 </div>
-                <div class="account__statistic-row">
-                  <div class="account__statistic-line">
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_730_to_830">
                     <p>
-                      <em>
-                        Рахунок:
-                      </em>
+                      7:30 - 9:30
                     </p>
                     <p>
-                      <em>
-                        10560 грн
-                      </em>
+                      name
                     </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
                   </div>
-                  <div class="account__statistic-line">
+                  <div class="schedule__content-row-info-card from_1200_to_1430">
                     <p>
-                      <em>
-                        Дохід за 30 днів:
-                      </em>
+                      12:00 - 14:30
                     </p>
                     <p>
-                      <em>
-                        8000 грн
-                      </em>
-                    </p>
-                  </div>
-                  <div class="account__statistic-line">
-                    <p>
-                      <em>
-                        Дохід з моменту реєстрації:
-                      </em>
+                      name
                     </p>
                     <p>
-                      <em>
-                        10560 грн
-                      </em>
+                      phone number
                     </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="skills">
-              <h2 class="title title--account title--skills">
-                Мої навички
-              </h2>
-              <button class="skills__button">
-                Розгортути / Згорнути
-              </button>
-              <div class="skills__cards">
-                <div class="skills__card">
-                  <div class="skills__card-title">
-                    <h3>
-                      Нігтьовий сервіс
-                    </h3>
-                    <input type="checkbox">
-                  </div>
-                  <div class="skills__card-services">
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
+                  <p>
+                    Середа
+                  </p>
+                  <p>
+                    23.06
+                  </p>
+                </div>
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_1530_to_1930">
                     <p>
-                      Надаю послуги
+                      7:30 - 9:30
                     </p>
-                    <div class="skills__card-sevices-description">
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Всі
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            3
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Аквтивні
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            2
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Валідовані
-                        </p>
-                        <div class="skills__card-services-description-part-text-background skills__card-services-description-part-text-background--validate">
-                          <p>
-                            1
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
                   </div>
-                  <div class="skills__card-change">
-                    <a href="">
-                      Змінити
-                    </a>
+                  <div class="schedule__content-row-info-card from_1200_to_1300">
+                    <p>
+                      12:00 - 14:30
+                    </p>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
                   </div>
                 </div>
-                <div class="skills__card">
-                  <div class="skills__card-title">
-                    <h3>
-                      Нігтьовий сервіс
-                    </h3>
-                    <input type="checkbox">
-                  </div>
-                  <div class="skills__card-services">
+              </div>
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
+                  <p>
+                    Четвер
+                  </p>
+                  <p>
+                    24.06
+                  </p>
+                </div>
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_1530_to_1930">
                     <p>
-                      Надаю послуги
+                      7:30 - 9:30
                     </p>
-                    <div class="skills__card-sevices-description">
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Всі
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            3
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Аквтивні
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            2
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Валідовані
-                        </p>
-                        <div class="skills__card-services-description-part-text-background skills__card-services-description-part-text-background--validate">
-                          <p>
-                            1
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
                   </div>
-                  <div class="skills__card-change">
-                    <a href="">
-                      Змінити
-                    </a>
+                  <div class="schedule__content-row-info-card from_1200_to_1430">
+                    <p>
+                      12:00 - 14:30
+                    </p>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
                   </div>
                 </div>
-                <div class="skills__card">
-                  <div class="skills__card-title">
-                    <h3>
-                      Нігтьовий сервіс
-                    </h3>
-                    <input type="checkbox">
-                  </div>
-                  <div class="skills__card-services">
+              </div>
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
+                  <p>
+                    П'ятниця
+                  </p>
+                  <p>
+                    25.06
+                  </p>
+                </div>
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_1530_to_1930">
                     <p>
-                      Надаю послуги
+                      7:30 - 9:30
                     </p>
-                    <div class="skills__card-sevices-description">
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Всі
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            3
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Аквтивні
-                        </p>
-                        <div class="skills__card-services-description-part-text-background">
-                          <p>
-                            2
-                          </p>
-                        </div>
-                      </div>
-                      <div class="skills__card-services-description-part">
-                        <p>
-                          Валідовані
-                        </p>
-                        <div class="skills__card-services-description-part-text-background skills__card-services-description-part-text-background--validate">
-                          <p>
-                            1
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
                   </div>
-                  <div class="skills__card-change">
-                    <a href="">
-                      Змінити
-                    </a>
+                  <div class="schedule__content-row-info-card from_1200_to_1300">
+                    <p>
+                      12:00 - 14:30
+                    </p>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
                   </div>
                 </div>
-                <button class="add">
-                  Додати
-                </button>
+              </div>
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
+                  <p>
+                    Субота
+                  </p>
+                  <p>
+                    26.06
+                  </p>
+                </div>
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_1530_to_1930">
+                    <p>
+                      7:30 - 9:30
+                    </p>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
+                  </div>
+                  <div class="schedule__content-row-info-card from_1200_to_1430">
+                    <p>
+                      12:00 - 14:30
+                    </p>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <section class="modal">
+      <div class="content modal-info__content">
+        <div class="main-info">
+          <div class="main-info-photo">
+            <img src="./images/model-photo.jpg" alt="Model">
+          </div>
+          <div class="main-info-text">
+            <p>
+              Юлія
+            </p>
+            <a href="">
+              Київська область, м.Київ вул. Червоноткацька 25, оф. 10
+            </a>
+            <div class="main-info-text-type">
+              <p>
+                <strong>
+                  Послуга:
+                </strong>
+              </p>
+              <p>
+                Манікюр класичний
+              </p>
+            </div>
+            <div class="main-info-text-type">
+              <p>
+                <strong>
+                  Дата:
+                </strong>
+              </p>
+              <p>
+                25.08.2023 12:30
+              </p>
+            </div>
+          </div>
+        </div>
+        <p>
+          <strong>
+            Послуга:
+          </strong>
+        </p>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.Sed ut perspiciatis unde omnis iste natus error sit
+            voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+            veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+            voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+            magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+            corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+            reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
+            dolorem eum fugiat quo voluptas nulla pariatur?
+          </p>
+        </div>
+        <div class="buttons">
+          <button class="message">
+            <svg width="18" height="12" viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.25 1.5C1.94062 1.5 1.6875 1.725 1.6875 2V2.69062L7.75195 7.11562C8.47969 7.64687 9.52383 7.64687 10.2516 7.11562L16.3125 2.69062V2C16.3125 1.725 16.0594 1.5 15.75 1.5H2.25ZM1.6875 4.63125V10C1.6875 10.275 1.94062 10.5 2.25 10.5H15.75C16.0594 10.5 16.3125 10.275 16.3125 10V4.63125L11.3203 8.275C9.97031 9.25937 8.02617 9.25937 6.67969 8.275L1.6875 4.63125ZM0 2C0 0.896875 1.00898 0 2.25 0H15.75C16.991 0 18 0.896875 18 2V10C18 11.1031 16.991 12 15.75 12H2.25C1.00898 12 0 11.1031 0 10V2Z" fill="#A6A6A6"/>
+            </svg>
+          </button>
+          <div class="buttons_wrapper">
+            <button class="application__card-actions-no">
+              <span>Відмовитись &ensp;</span><img src="./images/no.svg" alt="No">
+            </button>
+            <button class="application__card-actions-yes">
+              <span>Підтвердити &ensp;</span><span><img src="./images/yes.svg" alt="Yes"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="content filter__content">
+        <div class="filter__content-wrapper search-master-filter-wrapper">
+          <div class="search-master-filter-place">
+            <label for="place">
+              Де ви знаходитесь:
+            </label>
+            <select id="place">
+              <option value="">Київ</option>
+              <option value="">Черкаси</option>
+              <option value="">Житомир</option>
+              <option value="">Одеса</option>
+              <option value="">Полтава</option>
+              <option value="">Кривий ріг</option>
+            </select>
+          </div>
+          <select>
+            <option value="">Манікюр</option>
+            <option value="">Педікюр</option>
+            <option value="">Нарощування</option>
+            <option value="">Мейк ап</option>
+          </select>
+          <input type="date">
+          <select>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">4</option>
+          </select>
+          <button class="filter-button open-filter close-modal">
+            Підтвердити
+          </button>
+        </div>
+      </div>
+      <div class="content card-master__content">
+        <p>
+          Full Master Card
+        </p>
+      </div>
+      <div class="content delete-confirmation__content">
+        <p>
+          Хочете видалити цю групу послуг?
+        </p>
+        <div>
+          <button class="no close-modal">
+            Ні
+          </button>
+          <button class="yes close-modal">
+            Так
+          </button>
+        </div>
+      </div>
+      <div class="content schedule-card__content">
+        <p>
+          data
+        </p>
+        <p>
+          name
+        </p>
+        <p>
+          phone
+        </p>
+        <p>
+          additional
+        </p>
+        <p>
+          additional
+        </p>
+      </div>
+    </section>
+
   </main>
   <footer>
     <div class="container footer_container footer">
@@ -518,7 +720,7 @@
       </ul>
     </div>
     <div class="container footer--mobile">
-      <a href="#" class="current">
+      <a href="#">
         <svg width="24" height="24" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg">
           <path d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 6C11.4696 6 10.9609 6.21071 10.5858 6.58579C10.2107 6.96086 10 7.46957 10 8C10 8.53043 10.2107 9.03914 10.5858 9.41421C10.9609 9.78929 11.4696 10 12 10C12.5304 10 13.0391 9.78929 13.4142 9.41421C13.7893 9.03914 14 8.53043 14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6ZM12 13C14.67 13 20 14.33 20 17V20H4V17C4 14.33 9.33 13 12 13ZM12 14.9C9.03 14.9 5.9 16.36 5.9 17V18.1H18.1V17C18.1 16.36 14.97 14.9 12 14.9Z"/>
         </svg>
@@ -528,7 +730,7 @@
           <path d="M11 15H17V17H11V15ZM9 7H7V9H9V7ZM11 13H17V11H11V13ZM11 9H17V7H11V9ZM9 11H7V13H9V11ZM21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19C20.1 3 21 3.9 21 5ZM19 5H5V19H19V5ZM9 15H7V17H9V15Z"/>
         </svg>
       </a>
-      <a href="./schedule.html">
+      <a href="./schedule.html" class="current">
         <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6.10714 0.9375C6.10714 0.417969 5.67723 0 5.14286 0C4.60848 0 4.17857 0.417969 4.17857 0.9375V2.5H2.57143C1.15313 2.5 0 3.62109 0 5V17.5C0 18.8789 1.15313 20 2.57143 20H15.4286C16.8469 20 18 18.8789 18 17.5V5C18 3.62109 16.8469 2.5 15.4286 2.5H13.8214V0.9375C13.8214 0.417969 13.3915 0 12.8571 0C12.3228 0 11.8929 0.417969 11.8929 0.9375V2.5H6.10714V0.9375ZM1.92857 7.5H5.14286V9.6875H1.92857V7.5ZM1.92857 11.5625H5.14286V14.0625H1.92857V11.5625ZM7.07143 11.5625H10.9286V14.0625H7.07143V11.5625ZM12.8571 11.5625H16.0714V14.0625H12.8571V11.5625ZM16.0714 9.6875H12.8571V7.5H16.0714V9.6875ZM16.0714 15.9375V17.5C16.0714 17.8438 15.7821 18.125 15.4286 18.125H12.8571V15.9375H16.0714ZM10.9286 15.9375V18.125H7.07143V15.9375H10.9286ZM5.14286 15.9375V18.125H2.57143C2.21786 18.125 1.92857 17.8438 1.92857 17.5V15.9375H5.14286ZM10.9286 9.6875H7.07143V7.5H10.9286V9.6875Z"/>
         </svg>

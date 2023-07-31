@@ -3850,6 +3850,165 @@ a.location::before {
 }
 /*#endregion newsArticle*/
 
+/*#region schedule*/
+.schedule__up-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+}
+
+.schedule__up-wrapper button {
+  display: block;
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+  border-radius: 100px;
+  padding: 7px 20px;
+  color: var(--main-grey-color);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.schedule__up-wrapper button:hover {
+  background-color: #fff;
+  color: var(--accent-color);
+}
+
+.schedule {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 15px;
+}
+.schedule-time-list {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+.schedule-time-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: solid 1px var(--light-grey-text-color);
+  color: var(--main-grey-color);
+}
+.schedule-time-list li:nth-child(2n) {
+  color: var(--light-grey-text-color);
+}
+.schedule-time-list li:last-child {
+  border-bottom: solid 1px var(--light-grey-text-color);
+}
+
+.schedule__content {
+  display: flex;
+  gap: 15px;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+.schedule__content::-webkit-scrollbar {
+  height: 10px;
+}
+.schedule__content::-webkit-scrollbar-thumb {
+  background-color: rgba(166, 166, 166, 1);
+  border-radius: 100px;
+  transition: all 0.4s;
+}
+.schedule__content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(120, 120, 120, 1);
+}
+.schedule__content::-webkit-scrollbar-track {
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.schedule__content-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.schedule__content-row-day {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 30px;
+  gap: 60px;
+  padding: 10px 15px;
+  background-color: rgba(245, 245, 245, 1);
+}
+.schedule__content-row:first-child .schedule__content-row-day {
+  background-color: rgba(217, 217, 217, 1);
+}
+.schedule__content-row-day p {
+  margin-bottom: 0;
+  color: #000000;
+}
+.schedule__content-row:first-child .schedule__content-row-day p {
+  font-weight: 700;
+}
+.schedule__content-row-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(29, 26.5px);
+  background-color: rgba(245, 245, 245, 1);
+  height: calc(100% - 80px);
+  width: 100%;
+  margin-bottom: 35px;
+}
+.schedule__content-row:first-child .schedule__content-row-info {
+  background-color: rgba(217, 217, 217, 1);
+}
+
+.schedule__content-row-info-card {
+  position: relative;
+  width: 100%;
+  padding: 7px;
+  background-color: var(--accent-green-color);
+  overflow: hidden;
+}
+.schedule__content-row-info-card p {
+  margin-bottom: 0;
+  text-align: left;
+}
+.schedule__content-row-info-card p:first-child {
+  margin-bottom: 10px;
+}
+.schedule__content-row-info-card p:nth-child(2) {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.schedule__content-row-info-card p:last-child {
+  margin-top: 15px;
+}
+.schedule__content-row-info-card button {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 100px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.schedule__content-row-info-card button img {
+  object-fit: contain;
+}
+.schedule__content-row-info-card button:hover {
+  border-color: #000000;
+}
+
+
+@media screen and (min-width: 640px) {
+  .schedule__up-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+/*#endregion schedule*/
+
 
 
 /*#region modal*/
