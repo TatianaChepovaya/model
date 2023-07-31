@@ -3962,8 +3962,13 @@ a.location::before {
   position: relative;
   width: 100%;
   padding: 7px;
-  background-color: var(--accent-green-color);
   overflow: hidden;
+}
+.schedule__content-row-info-card:nth-child(even) {
+  background-color: var(--accent-green-color);
+}
+.schedule__content-row-info-card:nth-child(odd) {
+  background-color: rgba(255, 187, 162, 1);
 }
 .schedule__content-row-info-card p {
   margin-bottom: 0;
