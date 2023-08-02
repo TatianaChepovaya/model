@@ -20,8 +20,6 @@ function toggleTabContent () {
   }
 }
 function updateButtonVisibility(card, button) {
-  console.log(card.scrollHeight, card.clientHeight)
-  console.log(card.scrollHeight > card.clientHeight)
   button.style.display = card.scrollHeight > card.clientHeight
     ? 'flex'
     : 'none';
@@ -44,10 +42,14 @@ $(window).on('load', function() {
   }
 });
 
-
-
 $(document).ready(function () {
   toggleTabContent();
+
+  $('.schedule-detail__content-main-info').slick({
+    infinite: false,
+    arrows: true,
+    slidesToShow: 1,
+  });
 
   $(".menu__mobile-icon").on("click", function () {
     $(".header__menu-mobile-container").toggleClass("active");
@@ -72,11 +74,13 @@ $(document).ready(function () {
   const openFilterButtons = document.querySelectorAll('.open-filter');
   const openDeleteConfirmationButtons = document.querySelectorAll('.open-delete-confirmation');
   const openCardMasterButtons = document.querySelectorAll('.modal-master-card');
-  const openScheduleCardButtons = document.querySelectorAll('.open-schedule-card')
+  const openScheduleCardButtons = document.querySelectorAll('.schedule__content-row-info-card');
+  const openScheduleDetailButton = document.querySelector('.open-schedule-detail');
+  const openAddScheduleCardButton = document.querySelector('.open-add-schedule-card');
   const modalWindow = document.querySelector('.modal');
   const modalContent = document.querySelectorAll('.content');
 
-  function chooseContent (contentClassName) {
+  function chooseContent(contentClassName) {
     modalContent.forEach(content => {
       content.classList.remove('visible');
     })
@@ -118,6 +122,14 @@ $(document).ready(function () {
         chooseContent('schedule-card__content')
       })
     })
+
+    openScheduleDetailButton.addEventListener('click', function() {
+      chooseContent('schedule-detail__content');
+    })
+
+    openAddScheduleCardButton.addEventListener('click', function() {
+      chooseContent('add-card-to-schedule__content');
+    });
   
     modalWindow.addEventListener('click', function(event) {
       const isClickInsideModal = Array.from(modalContent).some(content => content.contains(event.target));
@@ -212,35 +224,10 @@ $(document).ready(function () {
 
   const scheduleCards = document.querySelectorAll('.schedule__content-row-info-card');
   const mapedTimeToConvert = {
-    '700': 1,
-    '730': 2,
-    '800': 3,
-    '830': 4,
-    '900': 5,
-    '930': 6,
-    '1000': 7,
-    '1030': 8,
-    '1100': 9,
-    '1130': 10,
-    '1200': 11,
-    '1230': 12,
-    '1300': 13,
-    '1330': 14,
-    '1400': 15,
-    '1430': 16,
-    '1500': 17,
-    '1530': 18,
-    '1600': 19,
-    '1630': 20,
-    '1700': 21,
-    '1730': 22,
-    '1800': 23,
-    '1830': 24,
-    '1900': 25,
-    '1930': 26,
-    '2000': 27,
-    '2030': 28,
-    '2100': 29,
+    '700': 1, '730': 2, '800': 3, '830': 4, '900': 5, '930': 6, '1000': 7, '1030': 8,
+    '1100': 9, '1130': 10, '1200': 11, '1230': 12, '1300': 13, '1330': 14, '1400': 15, '1430': 16,
+    '1500': 17, '1530': 18, '1600': 19, '1630': 20, '1700': 21, '1730': 22, '1800': 23, '1830': 24,
+    '1900': 25, '1930': 26, '2000': 27, '2030': 28, '2100': 29,
   }
 
   if (scheduleCards) {
