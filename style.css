@@ -107,6 +107,7 @@ header {
 
 .header__login li {
   font-size: 14px;
+  cursor: pointer;
 }
 
 .header__login li:first-child {
@@ -114,9 +115,24 @@ header {
 }
 
 .header__login li:last-child {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
   border-radius: 100px;
   background-color: var(--accent-color);
   padding: 9px;
+  cursor: pointer;
+  border: solid 1px var(--accent-color);
+  transition: all 0.4s;
+}
+.header__login li:last-child:hover {
+  background-color: #fff;
+}
+.header__login li:first-child {
+  transition: all 0.4s;
+}
+.header__login li:first-child:hover {
+  color: var(--accent-color);
 }
 
 .header__login li:last-child span {
@@ -227,12 +243,13 @@ header {
   border: 1px solid var(--accent-color);
   padding: 5px;
   font-weight: 400;
+  transition: all 0.4s;
 }
 
 .main__btn:hover,
 .main__btn:focus {
   background-color: #ffffff;
-  border: 1px solid #000000;
+  border: 1px solid var(--accent-color);
 }
 
 .hero__btn,
@@ -371,6 +388,11 @@ header {
   margin-left: 18px;
   text-decoration: underline;
   font-weight: 700;
+  transition: all 0.4s;
+}
+.findmodel__item a:hover,
+.joinmodel__item a:hover {
+  color: var(--accent-color);
 }
 
 .findmodel__item p,
@@ -779,6 +801,12 @@ footer {
     font-size: 14px;
     font-weight: 400;
     margin-right: 32px;
+    padding: 2px;
+    transition: all 0.4s;
+  }
+  .header__menu-list li:hover {
+    transform: translateY(-5px);
+    color: var(--accent-color);
   }
   .header__menu-list li:last-child {
     margin-right: 0;
@@ -1169,10 +1197,11 @@ input[type="file"] {
   background-color: var(--accent-color);
   border-radius: 100px;
   cursor: pointer;
-  transition: background-color 0.4s;
+  transition: all 0.4s;
 }
 .add:hover {
   background-color: #fff;
+  color: var(--accent-color);
 }
 .account__personal-text h3 {
   display: none;
@@ -1410,6 +1439,27 @@ a.with-news::after {
 }
 .services__items {
   width: 100%;
+}
+
+.services__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light-grey-color);
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-bottom: 25px;
+}
+.services__item-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+.services__item-counter p {
+  padding-top: 1px;
 }
 
 .services {
@@ -1998,17 +2048,23 @@ a.with-news::after {
   height: 30px;
   width: 50px;
   background: #fff;
-  border: 1px solid #A6A6A6;
+  border: 1px solid var(--light-grey-text-color);
   border-radius: 100px;
   cursor: pointer;
   transition: all 0.4s;
 }
+.application__card-model-additional-buttons button i {
+  color: var(--light-grey-text-color);
+  transition: all 0.4s;
+}
 .application__card-model-additional-buttons button:hover {
   border-color: var(--accent-green-color);
-  background: rgba(136, 199, 55, 0.2);
+}
+.application__card-model-additional-buttons button:hover i {
+  color: var(--accent-green-color);
 }
 
-.application__card-model-additional-buttons button.message img {
+.application__card-model-additional-buttons button.message i {
   transform: translateY(3px);
 }
 
@@ -2023,23 +2079,39 @@ a.with-news::after {
   justify-content: center;
   height: 30px;
   border-radius: 100px;
-  border: none;
   cursor: pointer;
 }
 .application__card-actions-no {
   background-color: var(--accent-color);
-  transition: transform 0.4s;
+  border: 1px solid var(--accent-color);
+  transition: all 0.4s;
+}
+.application__card-actions-no i {
+  color: #000000;
+  transition: all 0.4s;
 }
 .application__card-actions-no:hover {
-  transform: scale(0.85);
+  background-color: #fff;
+}
+.application__card-actions-no:hover i {
+  color: var(--accent-color);
 }
 .application__card-actions-yes {
   color: #ffffff;
   background-color: var(--accent-green-color);
-  transition: transform 0.4s;
+  border: solid 1px var(--accent-green-color);
+  transition: all 0.4s;
+}
+.application__card-actions-yes i {
+  color: #fff;
+  transition: all 0.4s;
 }
 .application__card-actions-yes:hover {
-  transform: scale(1.1);
+  background-color: #fff;
+  color: var(--accent-green-color);
+}
+.application__card-actions-yes:hover i {
+  color: var(--accent-green-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -2087,7 +2159,14 @@ a.with-news::after {
   border-radius: 5px;
   border: none;
   background-color: var(--light-grey-color);
+  border: solid 1px var(--light-grey-color);
   margin-bottom: 25px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.filter__button:hover {
+  background-color: #fff;
+  border-color: #000000;
 }
 
 .search__cards {
@@ -2142,16 +2221,29 @@ a.with-news::after {
   background-color: transparent;
   border: solid 1px #A6A6A6;
 }
+.search__card-actions button.info i {
+  color: #a6a6a6;
+  transition: all 0.4s;
+}
 .search__card-actions button.info:hover {
-  background-color: rgba(136, 199, 55, 0.2);
   border: solid 1px var(--accent-green-color);
 }
+.search__card-actions button.info:hover i {
+  color: var(--accent-green-color);
+}
 .search__card-actions button.apply {
-  border: none;
+  border: solid 1px var(--accent-green-color);
   background-color: var(--accent-green-color);
 }
+.search__card-actions button.apply i {
+  color: #fff;
+  transition: all 0.4s;
+}
 .search__card-actions button.apply:hover {
-  transform: scale(1.1);
+  background-color: #fff;
+}
+.search__card-actions button.apply:hover i {
+  color: var(--accent-green-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -2227,17 +2319,24 @@ a.with-news::after {
   background-color: var(--accent-color);
   border-radius: 100px;
   cursor: pointer;
-  transition: background-color 0.4s;
+  transition: all 0.4s;
 }
 .form__wrapper button:hover {
   background-color: #fff;
+  color: var(--accent-color);
 }
 .registration a {
   display: block;
   width: max-content;
   margin: 0 auto;
-  color: #A6A6A6;
+  color: var(--light-grey-text-color);
+  -webkit-text-stroke: 0 var(--light-grey-text-color);
   text-decoration: underline;
+  transition: all 0.4s;
+}
+.registration a:hover {
+  color: var(--accent-color);
+  -webkit-text-stroke: 0.5px var(--accent-color);
 }
 .form__wrapper--confirmation .timer__wrapper {
   display: flex;
@@ -2256,6 +2355,11 @@ a.with-news::after {
   text-align: left;
   margin: 0;
   border: none;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.form__wrapper--confirmation .timer__wrapper button:hover {
+  color: var(--accent-color);
 }
 .title--greeting {
   margin-bottom: 15px;
@@ -2740,18 +2844,25 @@ a.with-news::after {
   height: 30px;
   width: 50px;
   background: #fff;
-  border: 1px solid #A6A6A6;
+  border: 1px solid var(--light-grey-text-color);
   border-radius: 100px;
   cursor: pointer;
   transition: all 0.4s;
 }
 
-.offer__card-info-buttons button:hover {
-  border-color: var(--accent-green-color);
-  background: rgba(136, 199, 55, 0.2);
+.offer__card-info-buttons button i {
+  color: var(--light-grey-text-color);
+  transition: all 0.4s;
 }
 
-.offer__card-info-buttons button.message svg {
+.offer__card-info-buttons button:hover {
+  border-color: var(--accent-green-color);
+}
+.offer__card-info-buttons button:hover i {
+  color: var(--accent-green-color);
+}
+
+.offer__card-info-buttons button.message i {
   transform: translateY(2px);
 }
 
@@ -2762,15 +2873,17 @@ a.with-news::after {
   height: 30px;
   width: 50px;
   border-radius: 100px;
-  border: none;
   cursor: pointer;
 }
 
 .offer__card-info-buttons button.with-message {
   border-color: var(--accent-green-color);
 }
-.offer__card-info-buttons button.with-message svg path {
-  fill: var(--accent-green-color);
+.offer__card-info-buttons button.with-message i {
+  color: var(--accent-green-color);
+}
+.offer__card-info-buttons button.with-message:hover {
+  transform: translateY(-2px)
 }
 
 .offer__card-action-buttons p {
@@ -3080,6 +3193,9 @@ a.location::before {
 
 
 @media screen and (min-width: 768px) {
+  .search-master-row h2 {
+    text-align: left;
+  }
   .search-master-photo,
   .serach-master-personal-info,
   .search-master-example,
@@ -3158,12 +3274,27 @@ a.location::before {
     min-width: 50px;
   }
   button.seach-master-button-yes {
-    border: none;
+    border: solid 1px var(--accent-green-color);
     background-color: var(--accent-green-color);
     color: #fff;
     margin-bottom: 15px;
     padding: 8px 15px;
+    min-width: 165px;
+    cursor: pointer;
+    transition: all 0.4s;
   }
+  button.seach-master-button-yes i {
+    color: #fff;
+    transition: all 0.4s;
+  }
+  button.seach-master-button-yes:hover {
+    background-color: #fff;
+    color: var(--accent-green-color);
+  }
+  button.seach-master-button-yes:hover i {
+    color: var(--accent-green-color);
+  }
+
   .seach-master-buttons-wrapper {
     display: flex;
     justify-content: space-between;
@@ -3171,7 +3302,23 @@ a.location::before {
   .seach-master-buttons-wrapper button {
     padding: 5px 15px;
     border: solid 1px var(--light-grey-text-color);
+    cursor: pointer;
+    transition: all 0.4s;
   }
+  .seach-master-buttons-wrapper button i {
+    color: var(--light-grey-text-color);
+    transition: all 0.4s;
+  }
+  .seach-master-buttons-wrapper button:hover {
+    border-color: var(--accent-green-color);
+  }
+  .seach-master-buttons-wrapper button:hover i {
+    color: var(--accent-green-color);
+  }
+  .seach-master-button-message i {
+    padding-top: 1px;
+  }
+
   .search-master-date p {
     font-size: 11px;
     font-weight: 600;
@@ -3183,7 +3330,6 @@ a.location::before {
     margin-left: auto;
     margin-top: 25px;
   }
-
 
   .search-master-row {
     flex-direction: column;
@@ -3201,6 +3347,7 @@ a.location::before {
   }
   .search-master-filter-wrapper {
     display: flex;
+    gap: 10px;
   }
 
   .search-master-row {
@@ -3566,6 +3713,7 @@ a.location::before {
 }
 .tariff__card-part button:hover {
   background-color: #fff;
+  color: var(--accent-color);
 }
 .tariff__article {
   margin-bottom: 90px;
