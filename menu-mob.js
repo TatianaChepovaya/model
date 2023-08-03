@@ -55,10 +55,6 @@ $(document).ready(function () {
     $(".header__menu-mobile-container").toggleClass("active");
   });
 
-  $(window).on('resize', function() {
-    toggleTabContent();
-  });
-
   const chatInput = document.querySelector('.chat-input');
 
   if (chatInput) {
@@ -85,6 +81,8 @@ $(document).ready(function () {
       content.classList.remove('visible');
     })
     modalWindow.classList.add('visible');
+    document.body.classList.add('no-scroll');
+    document.querySelector('html').classList.add('no-scroll');
 
     const neededConentet = document.querySelector(`.${contentClassName}`);
 
@@ -136,12 +134,16 @@ $(document).ready(function () {
     
       if (!isClickInsideModal) {
         modalWindow.classList.remove('visible');
+        document.body.classList.remove('no-scroll');
+        document.querySelector('html').classList.remove('no-scroll');
       }
     });
 
     closeModalButtons.forEach(closeModalButton => {
       closeModalButton.addEventListener('click', function() {
         modalWindow.classList.remove('visible');
+        document.body.classList.remove('no-scroll');
+        document.querySelector('html').classList.remove('no-scroll');
       })
     })
   }
@@ -242,4 +244,42 @@ $(document).ready(function () {
   }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const customSelects = document.querySelectorAll('.custom-select');
 
+  customSelects.forEach(customSelect => {
+    const selectedOption = customSelect.querySelector('.select-selected');
+    const optionsContainer = customSelect.querySelector('.select-options');
+    const options = customSelect.querySelectorAll('.option');
+
+    selectedOption.addEventListener('click', function() {
+      selectedOption.style.borderColor = selectedOption.style.borderColor === 'rgb(166, 166, 166)' ? '#fb9a3b' : 'rgb(166, 166, 166)';
+      optionsContainer.style.display = optionsContainer.style.display === 'block' ? 'none' : 'block';
+    });
+
+    const selectedColor = selectedOption.dataset.color;
+    const selectedColorMarker = selectedOption.querySelector('.option-color-marker');
+
+    selectedColorMarker.style.backgroundColor = selectedColor;
+
+    options.forEach(option => {
+      const color = option.dataset.color;
+      const colorMarker = option.querySelector('.option-color-marker');
+
+      colorMarker.style.backgroundColor = color;
+
+      option.addEventListener('click', function() {
+        selectedOption.innerHTML = this.innerHTML;
+        selectedOption.dataset.color = color;
+        optionsContainer.style.display = 'none';
+        selectedOption.style.borderColor = 'rgb(166, 166, 166)';
+      });
+    });
+
+    document.addEventListener('click', function(event) {
+      if (!customSelect.contains(event.target)) {
+        optionsContainer.style.display = 'none';
+      }
+    });
+  });
+});

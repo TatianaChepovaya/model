@@ -32,6 +32,10 @@ body {
   color: var(--main-grey-color);
   margin: 0;
 }
+html.no-scroll,
+body.no-scroll {
+  overflow-y: hidden;
+}
 
 h1,
 h2,
@@ -1200,11 +1204,11 @@ input[type="file"] {
   min-height: 24px;
 }
 
-a svg path {
-  fill: #ffffff;
+a i {
+  color: #ffffff;
 }
-a.current svg path {
-  fill: var(--accent-color);
+a.current i {
+  color: var(--accent-color);
 }
 a.with-news {
   position: relative;
@@ -3939,6 +3943,7 @@ a.location::before {
   display: flex;
   gap: 15px;
   max-width: 100%;
+  overflow-x: scroll;
 }
 .schedule__content::-webkit-scrollbar {
   height: 10px;
@@ -4093,6 +4098,34 @@ a.location::before {
 .content__wrapper::-webkit-scrollbar {
   width: 0.5em;
 }
+.cross-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: 5px;
+  right: 0;
+  border: solid 1px var(--main-grey-color);
+  background-color: #fff;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.cross-button i {
+  padding-top: 1px;
+  object-fit: cover;
+  color: var(--main-grey-color);
+  transition: all 0.4s;
+}
+.cross-button:hover {
+  border-color: var(--accent-color);
+}
+.cross-button:hover i {
+  color: var(--accent-color);
+}
+
 .main-info {
   display: flex;
   margin-bottom: 10px;
@@ -4414,16 +4447,17 @@ a.location::before {
   border-radius: 100px;
   transition: all 0.4s;
 }
-.schedule-card__content-actions-links a svg path {
-  fill: rgba(166, 166, 166, 1);
+.schedule-card__content-actions-links a i {
+  padding-top: 1px;
+  color: rgba(166, 166, 166, 1);
   transition: all 0.4s;
 }
 .schedule-card__content-actions-links a:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
-.schedule-card__content-actions-links a:hover svg path {
-  fill: var(--accent-color);
+.schedule-card__content-actions-links a:hover i {
+  color: var(--accent-color);
 }
 
 .schedule-card__content-actions select,
@@ -4440,7 +4474,7 @@ select.choose-color:focus {
 .schedule-card__content-actions select option {
   color: rgba(166, 166, 166, 1);
 }
-.schedule__content textarea {
+.schedule-modal__content textarea {
   resize: none;
   width: 100%;
   height: 80px;
@@ -4452,7 +4486,7 @@ select.choose-color:focus {
   outline: none;
   font-family: inherit;
 }
-.schedule__content textarea:focus {
+.schedule-modal__content textarea:focus {
   border-color: var(--accent-color);
 }
 
@@ -4466,7 +4500,7 @@ select.choose-color:focus {
 .schedule-card__content-buttons button.open-delete-confirmation {
   margin-left: 0;
 }
-.schedule__content button.aprove {
+.schedule-modal__content button.aprove {
   padding: 7px 14px;
   border-radius: 100px;
   border: solid 1px var(--accent-color);
@@ -4475,7 +4509,7 @@ select.choose-color:focus {
   transition: all 0.4s;
   cursor: pointer;
 }
-.schedule__content button.aprove:hover {
+.schedule-modal__content button.aprove:hover {
   background-color: transparent;
 }
 
@@ -4519,7 +4553,7 @@ select.choose-color:focus {
 .add-card-to-schedule__content-buttons {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -4545,6 +4579,9 @@ select.choose-color:focus {
   .add-card-to-schedule__content-info-inputs {
     margin-bottom: 0;
   }
+  .add-card-to-schedule__content-info-inputs .custom-select {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -4557,5 +4594,65 @@ select.choose-color:focus {
 }
 /*#endregion modal*/
 
+/*#region customSelect*/
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.select-selected {
+  border: 1px solid var(--light-grey-text-color);
+  border-radius: 100px;
+  padding: 7px 14px;
+  cursor: pointer;
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 20px;
+  margin: 0 auto;
+  border: 1px solid #a6a6a6;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+.select-options::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.select-selected,
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 14px;
+  cursor: pointer;
+}
+.option-color-marker {
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+}
+
+.option:hover {
+  background-color: #ddd;
+}
+
+@media screen and (min-width: 640px) {
+  .custom-select {
+    width: 140px;
+  }
+}
+/*#endregion customSelect*/
 
 
