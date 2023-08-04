@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal model account</title>
+  <title>Personal account</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
     rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
   />
   <link rel="stylesheet" href="style.css" />
   <link
@@ -102,36 +102,63 @@
     </div>
   </header>
   <main>
-    <section class="section application--model">
+    <section class="section account">
       <div class="container">
-        <h2 class="title title--account title--services">
-          Мої заявки
-        </h2>
+        <div class="schedule__up-wrapper">
+          <h2 class="title title--account">
+            Це ваш кабінет
+          </h2>
+          <div class="schedule__up-wrapper-buttons">
+            <button class="open-schedule-detail">
+              <i class="fa-solid fa-gear"></i>
+              Графік
+            </button>
+            <button class="open-add-schedule-card">
+              Додати запис
+            </button>
+          </div>
+        </div>
         <div class="main-content">
           <nav class="navigation">
             <ul class="navigation-list">
               <li>
-                <a href="./personal__model__account.html">
+                <a href="./personal__account.html">
                   <i class="fa-regular fa-user fa-lg"></i>
                 </a>
-                <a href="./personal__model__account.html">
+                <a href="./personal__account.html">
                   Кабінет
                 </a>
               </li>
-              <li class="current">
-                <a href="./applications__model.html" class="with-news">
-                  <i class="fa-solid fa-users fa-lg"></i>
+              <li>
+                <a href="./services.html" class="with-news">
+                  <i class="fa-regular fa-rectangle-list fa-lg"></i>
                 </a>
-                <a href="./applications__model.html">
-                  Мої заявки
+                <a href="./services.html">
+                  Мої послуги
+                </a>
+              </li>
+              <li class="current">
+                <a href="./schedule.html">
+                  <i class="fa-regular fa-calendar-days fa-lg"></i>
+                </a>
+                <a href="./schedule.html">
+                  Мій графік
                 </a>
               </li>
               <li>
-                <a href="./search_master.html">
+                <a href="./applications.html">
+                  <i class="fa-solid fa-users fa-lg"></i>
+                </a>
+                <a href="./applications.html">
+                  Заявки
+                </a>
+              </li>
+              <li>
+                <a href="./search__model.html">
                   <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                 </a>
-                <a href="./search_master.html">
-                  Знайти майстра
+                <a href="./search__model.html">
+                  Знайти модель
                 </a>
               </li>
               <li>
@@ -152,330 +179,420 @@
               </li>
             </ul>
           </nav>
-          <div class="application__wrapper--model">
-            <h3>
-              Заявки від майстрів
-            </h3>
-            <div class="application__offer--model">
-              <div class="application__subtitle--model">
-                <p>
-                  Нігтьовий сервіс
-                </p>
-              </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
+          <div class="schedule">
+            <ul class="schedule-time-list">
+              <li>
+                7:00
+              </li>
+              <li>
+                7:30
+              </li>
+              <li>
+                8:00
+              </li>
+              <li>
+                8:30
+              </li>
+              <li>
+                9:00
+              </li>
+              <li>
+                9:30
+              </li>
+              <li class="current-time">
+                10:00
+              </li>
+              <li>
+                10:30
+              </li>
+              <li>
+                11:00
+              </li>
+              <li>
+                11:30
+              </li>
+              <li>
+                12:00
+              </li>
+              <li>
+                12:30
+              </li>
+              <li>
+                13:00
+              </li>
+              <li>
+                13:30
+              </li>
+              <li>
+                14:00
+              </li>
+              <li>
+                14:30
+              </li>
+              <li>
+                15:00
+              </li>
+              <li>
+                15:30
+              </li>
+              <li>
+                16:00
+              </li>
+              <li>
+                16:30
+              </li>
+              <li>
+                17:00
+              </li>
+              <li>
+                17:30
+              </li>
+              <li>
+                18:00
+              </li>
+              <li>
+                18:30
+              </li>
+              <li>
+                19:00
+              </li>
+              <li>
+                19:30
+              </li>
+              <li>
+                20:00
+              </li>
+              <li>
+                20:30
+              </li>
+              <li>
+                21:00
+              </li>
+            </ul>
+            <div class="schedule__content">
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
                   <p>
-                    Манікюр класичний
+                    Понеділок
+                  </p>
+                  <p>
+                    20.06
                   </p>
                 </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_800_to_1000">
+                    <p>
+                      8:00 - 10:00
+                    </p>
+                    <p>
+                       Ольга Світанчук
+                    </p>
+                    <p>
+                      099 123 45 97
+                    </p>
+                    <p>
+                      Класичний манікюр
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
                   </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
+                  <div class="schedule__content-row-info-card from_1030_to_1200">
+                    <p>
+                      10:30 - 12:00
+                    </p>
+                    <p>
+                      Юлія Стадник
+                    </p>
+                    <p>
+                      098 123 45 67
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
+                  </div>
+                  <div class="schedule__content-row-info-card from_1400_to_1500">
+                    <p>
+                      14:00 - 15:00
+                    </p>
+                    <p>
+                      Марина
+                    </p>
+                    <p>
+                      098 123 45 67
+                    </p>
+                    <p>
+                      Корекція
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
                   <p>
-                    Манікюр класичний
+                    Вівторок
+                  </p>
+                  <p>
+                    21.06
                   </p>
                 </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message with-message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_900_to_1100">
+                    <p>
+                      9:00 - 11:00
+                    </p>
+                    <p>
+                      Богдана Левко
+                    </p>
+                    <p>
+                      098 325 45 65
+                    </p>
+                    <p>
+                      Апаратний манікюр з покриттям
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
                   </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
+                  <div class="schedule__content-row-info-card from_1100_to_1300">
+                    <p>
+                      11:00 - 13:00
+                    </p>
+                    <p>
+                      Тетяна Нечувай
+                    </p>
+                    <p>
+                      099 564 78 32
+                    </p>
+                    <p>
+                      Педікюр
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
+                  </div>
+                  <div class="schedule__content-row-info-card from_1300_to_1500">
+                    <p>
+                      13:00 - 15:00
+                    </p>
+                    <p>
+                      Христина Данилюк
+                    </p>
+                    <p>
+                      098 325 45 65
+                    </p>
+                    <p>
+                      Педікюр
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
+                  </div>
+                  <div class="schedule__content-row-info-card from_1600_to_1700">
+                    <p>
+                      16:00 - 17:00
+                    </p>
+                    <p>
+                      Віолета
+                    </p>
+                    <p>
+                      099 564 78 32
+                    </p>
+                    <p>
+                      Педікюр
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
+                    </button>
+                  </div>
+                  <div class="schedule__content-row-info-card from_1700_to_1800">
+                    <p>
+                      17:00 - 18:00
+                    </p>
+                    <p>
+                      Наталія Панасюк
+                    </p>
+                    <p>
+                      099 564 78 32
+                    </p>
+                    <p>
+                      Педікюр
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
                   <p>
-                    Манікюр класичний
+                    Середа
+                  </p>
+                  <p>
+                    23.06
                   </p>
                 </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_830_to_930">
+                    <p>
+                      8:30 - 9:30
+                    </p>
+                    <p>
+                      Анастасія
+                    </p>
+                    <p>
+                      095 465 32 18
+                    </p>
+                    <p>
+                      Манікюр
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
                   </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
+                  <div class="schedule__content-row-info-card from_1000_to_1400">
+                    <p>
+                      10:00 - 14:00
+                    </p>
+                    <p>
+                      Ольша Лавриненко
+                    </p>
+                    <p>
+                      098 745 61 35
+                    </p>
+                    <p>
+                      Манікюр + Педікюр
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="application__offer--model">
-              <div class="application__subtitle--model">
-                <p>
-                  Фотомодель
-                </p>
-              </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
                   <p>
-                    Манікюр класичний
+                    Четвер
+                  </p>
+                  <p>
+                    24.06
                   </p>
                 </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message with-message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
-                    </button>
-                  </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_1500_to_1730">
+                    <p>
+                      15:00 - 17:30
+                    </p>
+                    <p>
+                      Наталія
+                    </p>
+                    <p>
+                      095 723 65 48
+                    </p>
+                    <p>
+                      Корекція
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <h3>
-              Мої заявки
-            </h3>
-            <div class="application__offer--model">
-              <div class="application__subtitle--model">
-                <p>
-                  Нігтьовий сервіс
-                </p>
-              </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
                   <p>
-                    Манікюр класичний
+                    П'ятниця
+                  </p>
+                  <p>
+                    25.06
                   </p>
                 </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_1530_to_1930">
+                    <p>
+                      7:30 - 9:30
+                    </p>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
                   </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
+                  <div class="schedule__content-row-info-card from_1200_to_1300">
+                    <p>
+                      12:00 - 14:30
+                    </p>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
+              <div class="schedule__content-row">
+                <div class="schedule__content-row-day">
                   <p>
-                    Манікюр класичний
+                    Субота
+                  </p>
+                  <p>
+                    26.06
                   </p>
                 </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message with-message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
-                    </button>
-                  </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
+                <div class="schedule__content-row-info">
+                  <div class="schedule__content-row-info-card from_1530_to_1930">
                     <p>
-                      Юлія
+                      7:30 - 9:30
                     </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
                     <p>
-                      25.08.2023
+                      name
                     </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
-                  <p>
-                    Манікюр класичний
-                  </p>
-                </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
                   </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
+                  <div class="schedule__content-row-info-card from_1200_to_1430">
+                    <p>
+                      12:00 - 14:30
+                    </p>
+                    <p>
+                      name
+                    </p>
+                    <p>
+                      phone number
+                    </p>
+                    <p>
+                      additional
+                    </p>
+                    <button class="open-schedule-card">
+                      <img src="./images/dots--button.svg">
                     </button>
                   </div>
                 </div>
@@ -904,12 +1021,15 @@
         </div>
       </div>
     </section>
+
   </main>
   <footer>
     <div class="container footer_container footer">
       <div class="footer__wrap">
         <ul class="footer__list-social">
-          <li><img src="/images/fb.svg" alt="" width="34" height="34" /></li>
+          <li>
+            <img src="/images/fb.svg" alt="" width="34" height="34" />
+          </li>
           <li>
             <img src="./images/Instagram.svg" alt="" width="34" height="34" />
           </li>
@@ -930,13 +1050,19 @@
       </ul>
     </div>
     <div class="container footer--mobile">
-      <a href="./personal__model__account.html">
+      <a href="#">
         <i class="fa-regular fa-user fa-xl"></i>
       </a>
-      <a href="./applications__model.html" class="with-news current">
+      <a href="./services.html" class="with-news">
+        <i class="fa-regular fa-rectangle-list fa-xl"></i>
+      </a>
+      <a href="./schedule.html" class="current">
+        <i class="fa-regular fa-calendar-days fa-xl"></i>
+      </a>
+      <a href="./applications.html">
         <i class="fa-solid fa-users fa-xl"></i>
       </a>
-      <a href="./search_master.html">
+      <a href="./search__model.html">
         <i class="fa-solid fa-magnifying-glass fa-xl"></i>
       </a>
       <a href="./messages.html" class="with-news">

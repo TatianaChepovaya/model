@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal model account</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"
-  >
-  <link
-    rel="stylesheet"
-    type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-  >
-  <script
-    type="text/javascript"
-    src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"
-  ></script>
-  <script src="./menu-mob.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"
+    >
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    >
+    <script
+      type="text/javascript"
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"
+    ></script>
+    <script src="./menu-mob.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </head>
 <body>
   <header class="header--white">
     <div class="container header__container header__container--account">
@@ -102,36 +102,44 @@
     </div>
   </header>
   <main>
-    <section class="section application--model">
-      <div class="container">
+    <section class="section services">
+      <div class="container services__container">
         <h2 class="title title--account title--services">
-          Мої заявки
+          Послуги
         </h2>
         <div class="main-content">
           <nav class="navigation">
             <ul class="navigation-list">
               <li>
-                <a href="./personal__model__account.html">
+                <a href="./personal__account.html">
                   <i class="fa-regular fa-user fa-lg"></i>
                 </a>
-                <a href="./personal__model__account.html">
+                <a href="./personal__account.html">
                   Кабінет
                 </a>
               </li>
               <li class="current">
-                <a href="./applications__model.html" class="with-news">
-                  <i class="fa-solid fa-users fa-lg"></i>
+                <a href="./services.html" class="with-news">
+                  <i class="fa-regular fa-rectangle-list fa-lg"></i>
                 </a>
-                <a href="./applications__model.html">
-                  Мої заявки
+                <a href="./services.html">
+                  Мої послуги
                 </a>
               </li>
               <li>
-                <a href="./search_master.html">
+                <a href="./applications.html">
+                  <i class="fa-solid fa-users fa-lg"></i>
+                </a>
+                <a href="./applications.html">
+                  Заявки
+                </a>
+              </li>
+              <li>
+                <a href="./search__model.html">
                   <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                 </a>
-                <a href="./search_master.html">
-                  Знайти майстра
+                <a href="./search__model.html">
+                  Знайти модель
                 </a>
               </li>
               <li>
@@ -152,335 +160,43 @@
               </li>
             </ul>
           </nav>
-          <div class="application__wrapper--model">
-            <h3>
-              Заявки від майстрів
-            </h3>
-            <div class="application__offer--model">
-              <div class="application__subtitle--model">
-                <p>
-                  Нігтьовий сервіс
-                </p>
-              </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
+          <div class="services__form">
+            <form action="">
+              <div class="services__form-row--first">
+                <input type="text" placeholder="Назва послуги">
+                <div class="services__form-row--first-buttons">
+                  <button>
+                    Скасувати
+                  </button>
+                  <button>
+                    Зберегти зміни
+                  </button>
                 </div>
-                <div class="offer__card-type">
+              </div>
+              <div class="services__form-row--second">
+                <select name="">
+                  <option value="" selected disabled>Оберіть категорію послуги</option>
+                  <option value="">Манікюр</option>
+                  <option value="">Педікюр</option>
+                  <option value="">Мейк ап</option>
+                  <option value="">Брови, вії, нарощування</option>
+                </select>
+                <div>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" checked>
+                    <div></div>
+                  </label>
                   <p>
-                    Манікюр класичний
+                    Активна
                   </p>
                 </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
-                    </button>
-                  </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
-                    </button>
-                  </div>
-                </div>
               </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
-                  <p>
-                    Манікюр класичний
-                  </p>
-                </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message with-message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
-                    </button>
-                  </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
-                  <p>
-                    Манікюр класичний
-                  </p>
-                </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
-                    </button>
-                  </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="application__offer--model">
-              <div class="application__subtitle--model">
-                <p>
-                  Фотомодель
-                </p>
-              </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
-                  <p>
-                    Манікюр класичний
-                  </p>
-                </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message with-message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
-                    </button>
-                  </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h3>
-              Мої заявки
-            </h3>
-            <div class="application__offer--model">
-              <div class="application__subtitle--model">
-                <p>
-                  Нігтьовий сервіс
-                </p>
-              </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
-                  <p>
-                    Манікюр класичний
-                  </p>
-                </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
-                    </button>
-                  </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
-                  <p>
-                    Манікюр класичний
-                  </p>
-                </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message with-message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
-                    </button>
-                  </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="application__offer__card--model offer__card">
-                <div class="offer__card-main-info-wrapper">
-                  <div class="offer__card-photo">
-                    <img src="./images/model-photo.jpg" alt="Model">
-                  </div>
-                  <div class="offer__card-info">
-                    <p>
-                      Юлія
-                    </p>
-                    <a href="">
-                      Київська область, м.Київ
-                    </a>
-                  </div>
-                  <div class="offer__card-date">
-                    <p>
-                      25.08.2023
-                    </p>
-                  </div>
-                </div>
-                <div class="offer__card-type">
-                  <p>
-                    Манікюр класичний
-                  </p>
-                </div>
-                <div class="offer__card-buttons">
-                  <div class="offer__card-info-buttons">
-                    <button class="info">
-                      <i class="fa-solid fa-info fa-lg"></i>
-                    </button>
-                    <button class="message">
-                      <i class="fa-regular fa-envelope fa-xl"></i>
-                    </button>
-                  </div>
-                  <div class="offer__card-action-buttons">
-                    <button class="application__card-actions-no">
-                      <i class="fa-solid fa-xmark fa-xl"></i>
-                    </button>
-                    <button class="application__card-actions-yes">
-                      <span>Підтвердити &ensp;</span><span><i class="fa-solid fa-check fa-xl"></i></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <textarea name="" id="" placeholder="Опис послуги"></textarea>
+              <button class="open-delete-confirmation">
+                <i class="fa-solid fa-trash" style="color: #ff0000;"></i>
+                <p>Видалити</p>
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -930,13 +646,16 @@
       </ul>
     </div>
     <div class="container footer--mobile">
-      <a href="./personal__model__account.html">
+      <a href="./personal__account.html">
         <i class="fa-regular fa-user fa-xl"></i>
       </a>
-      <a href="./applications__model.html" class="with-news current">
+      <a href="#" class="with-news current">
+        <i class="fa-regular fa-rectangle-list fa-xl"></i>
+      </a>
+      <a href="./applications.html">
         <i class="fa-solid fa-users fa-xl"></i>
       </a>
-      <a href="./search_master.html">
+      <a href="./search__model.html">
         <i class="fa-solid fa-magnifying-glass fa-xl"></i>
       </a>
       <a href="./messages.html" class="with-news">

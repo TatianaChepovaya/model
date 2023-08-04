@@ -19,6 +19,11 @@ function toggleTabContent () {
     });
   }
 }
+function updateButtonVisibility(card, button) {
+  button.style.display = card.scrollHeight > card.clientHeight
+    ? 'flex'
+    : 'none';
+}
 
 $(window).on('load', function() {
   const contentHeight = $('body').height();
@@ -40,12 +45,14 @@ $(window).on('load', function() {
 $(document).ready(function () {
   toggleTabContent();
 
-  $(".menu__mobile-icon").on("click", function () {
-    $(".header__menu-mobile-container").toggleClass("active");
+  $('.schedule-detail__content-main-info').slick({
+    infinite: false,
+    arrows: true,
+    slidesToShow: 1,
   });
 
-  $(window).on('resize', function() {
-    toggleTabContent();
+  $(".menu__mobile-icon").on("click", function () {
+    $(".header__menu-mobile-container").toggleClass("active");
   });
 
   const chatInput = document.querySelector('.chat-input');
@@ -61,56 +68,82 @@ $(document).ready(function () {
   const openModalButtons = document.querySelectorAll('.open-modal');
   const closeModalButtons = document.querySelectorAll('.close-modal');
   const openFilterButtons = document.querySelectorAll('.open-filter');
+  const openDeleteConfirmationButtons = document.querySelectorAll('.open-delete-confirmation');
   const openCardMasterButtons = document.querySelectorAll('.modal-master-card');
+  const openScheduleCardButtons = document.querySelectorAll('.schedule__content-row-info-card');
+  const openScheduleDetailButton = document.querySelector('.open-schedule-detail');
+  const openAddScheduleCardButton = document.querySelector('.open-add-schedule-card');
   const modalWindow = document.querySelector('.modal');
   const modalContent = document.querySelectorAll('.content');
 
-  function hideContent () {
+  function chooseContent(contentClassName) {
     modalContent.forEach(content => {
       content.classList.remove('visible');
     })
-  }
-  function chooseContent (contentClassName) {
+    modalWindow.classList.add('visible');
+    document.body.classList.add('no-scroll');
+    document.querySelector('html').classList.add('no-scroll');
+
     const neededConentet = document.querySelector(`.${contentClassName}`);
+
     neededConentet.classList.add('visible');
   }
 
   if (openModalButtons && modalWindow && openFilterButtons) {
     openModalButtons.forEach(openModalButton => {
       openModalButton.addEventListener('click', function() {
-        hideContent();
-        modalWindow.classList.add('visible');
         chooseContent('modal-info__content');
       })
     })
 
     openFilterButtons.forEach(openFilterButton => {
       openFilterButton.addEventListener('click', function() {
-        hideContent();
-        modalWindow.classList.add('visible');
         chooseContent('filter__content');
       })
     })
 
     openCardMasterButtons.forEach(openCardMasterButton => {
         openCardMasterButton.addEventListener('click', function() {
-        hideContent();
-        modalWindow.classList.add('visible');
         chooseContent('card-master__content');
       })
     })
+
+    openDeleteConfirmationButtons.forEach(openDeleteConfirmationButton => {
+      openDeleteConfirmationButton.addEventListener('click', function(event) {
+        event.preventDefault()
+        chooseContent('delete-confirmation__content');
+      })
+    })
+
+    openScheduleCardButtons.forEach(openScheduleCardButton => {
+      openScheduleCardButton.addEventListener('click', function() {
+        chooseContent('schedule-card__content')
+      })
+    })
+
+    openScheduleDetailButton.addEventListener('click', function() {
+      chooseContent('schedule-detail__content');
+    })
+
+    openAddScheduleCardButton.addEventListener('click', function() {
+      chooseContent('add-card-to-schedule__content');
+    });
   
     modalWindow.addEventListener('click', function(event) {
       const isClickInsideModal = Array.from(modalContent).some(content => content.contains(event.target));
     
       if (!isClickInsideModal) {
         modalWindow.classList.remove('visible');
+        document.body.classList.remove('no-scroll');
+        document.querySelector('html').classList.remove('no-scroll');
       }
     });
 
     closeModalButtons.forEach(closeModalButton => {
       closeModalButton.addEventListener('click', function() {
         modalWindow.classList.remove('visible');
+        document.body.classList.remove('no-scroll');
+        document.querySelector('html').classList.remove('no-scroll');
       })
     })
   }
@@ -147,6 +180,106 @@ $(document).ready(function () {
       }
     })
   }
+
+  const moreNewsButton = document.querySelector('.more__news');
+  const newsContent = document.querySelector('.news__container');
+  const newsContentHeight = window.innerWidth <= 500
+    ? '1345px'
+    : '1560px';
+
+  if (moreNewsButton && newsContent) {
+    moreNewsButton.addEventListener('click', () => {
+      newsContent.classList.toggle('visible');
+
+      const isHidden = newsContent.classList.contains('visible');
+
+      if (!isHidden) {
+        moreNewsButton.textContent = 'Більше новин';
+        newsContent.style.maxHeight = newsContentHeight;
+      } else {
+        moreNewsButton.textContent = 'Менше новин';
+        newsContent.style.maxHeight = `${newsContent.scrollHeight}px`;
+      }
+    })
+  }
+
+  if (window.innerWidth < 768) {
+    $('.another__news-content-wrapper').slick({
+      infinite: false,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
+  }
+
+  const scheduleCards = document.querySelectorAll('.schedule__content-row-info-card');
+  const mapedTimeToConvert = {
+    '700': 1, '730': 2, '800': 3, '830': 4, '900': 5, '930': 6, '1000': 7, '1030': 8,
+    '1100': 9, '1130': 10, '1200': 11, '1230': 12, '1300': 13, '1330': 14, '1400': 15, '1430': 16,
+    '1500': 17, '1530': 18, '1600': 19, '1630': 20, '1700': 21, '1730': 22, '1800': 23, '1830': 24,
+    '1900': 25, '1930': 26, '2000': 27, '2030': 28, '2100': 29,
+  }
+
+  if (scheduleCards) {
+    scheduleCards.forEach(scheduleCard => {
+      const neddedClass = scheduleCard.classList[1];
+      const parts = neddedClass.match(/\d+/g).map(item => mapedTimeToConvert[item])
+      scheduleCard.style.gridRow = `${parts[0]}/${parts[1]}`;
+
+      const scheduleCardButton = scheduleCard.querySelector('button');
+      updateButtonVisibility(scheduleCard, scheduleCardButton)
+    })
+  }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const customSelects = document.querySelectorAll('.custom-select');
 
+  customSelects.forEach(customSelect => {
+    const selectedOption = customSelect.querySelector('.select-selected');
+    const optionsContainer = customSelect.querySelector('.select-options');
+    const options = customSelect.querySelectorAll('.option');
+
+    selectedOption.addEventListener('click', function() {
+      selectedOption.style.borderColor = selectedOption.style.borderColor === 'rgb(166, 166, 166)' ? '#fb9a3b' : 'rgb(166, 166, 166)';
+      optionsContainer.style.display = optionsContainer.style.display === 'block' ? 'none' : 'block';
+    });
+
+    const selectedColor = selectedOption.dataset.color;
+    const selectedColorMarker = selectedOption.querySelector('.option-color-marker');
+
+    selectedColorMarker.style.backgroundColor = selectedColor;
+
+    options.forEach(option => {
+      const color = option.dataset.color;
+      const colorMarker = option.querySelector('.option-color-marker');
+
+      colorMarker.style.backgroundColor = color;
+
+      option.addEventListener('click', function() {
+        selectedOption.innerHTML = this.innerHTML;
+        selectedOption.dataset.color = color;
+        optionsContainer.style.display = 'none';
+        selectedOption.style.borderColor = 'rgb(166, 166, 166)';
+      });
+    });
+
+    document.addEventListener('click', function(event) {
+      if (!customSelect.contains(event.target)) {
+        optionsContainer.style.display = 'none';
+      }
+    });
+  });
+});

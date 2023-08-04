@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Settings</title>
+    <title>Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -102,16 +102,11 @@
     </div>
   </header>
   <main>
-    <section class="section account settings">
+    <section class="section services">
       <div class="container services__container">
-        <h2 class="title title--account">
-          Це ваш кабінет
+        <h2 class="title title--account title--services">
+          Послуги
         </h2>
-        <p>
-          <em>
-            Заповніть особисті дані та розпочинайте пошук
-          </em>
-        </p>
         <div class="main-content">
           <nav class="navigation">
             <ul class="navigation-list">
@@ -123,11 +118,11 @@
                   Кабінет
                 </a>
               </li>
-              <li>
-                <a href="./services.html" class="with-news">
+              <li class="current">
+                <a href="#" class="with-news">
                   <i class="fa-regular fa-rectangle-list fa-lg"></i>
                 </a>
-                <a href="./services.html">
+                <a href="#">
                   Мої послуги
                 </a>
               </li>
@@ -155,7 +150,7 @@
                   Повідомлення
                 </a>
               </li>
-              <li class="current">
+              <li>
                 <a href="./settings.html">
                   <i class="fa-solid fa-gear fa-lg"></i>
                 </a>
@@ -166,97 +161,62 @@
             </ul>
           </nav>
           <div class="content_wrapper">
-            <form action="" class="setting__form">
-              <div class="setting__part">
-                <h4>
-                  Головне
-                </h4>
-                <label>
-                  <input type="checkbox">
-                  Відображати профіль в пошуку
-                </label>
-                <label>
-                  <input type="checkbox">
-                  Дозволити відправляти мені повідомлення
-                </label>
-              </div>
-              <div class="setting__part">
-                <h4>
-                  Сповіщення
-                </h4>
-                <label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <div></div>
-                  </label>
-                  Отримувати повідомлення на E-mail
-                </label>
-                <label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <div></div>
-                  </label>
-                  Дозволити інформувати в месенджерах (Telegram| Viber)
-                </label>
-              </div>
-              <div class="setting__part">
-                <h4>
-                  Просування
-                </h4>
-                <label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <div></div>
-                  </label>
-                  Пошук на платформі
-                </label>
-                <label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <div></div>
-                  </label>
-                  Група телеграм
-                </label>
-                <label>
-                  <label class="custom-checkbox">
-                    <input type="checkbox">
-                    <div></div>
-                  </label>
-                  Facebook
-                </label>
-              </div>
-              <div class="setting__part">
-                <h4>
-                  Безпека
-                </h4>
-                <p>
-                  Зміна пароля
-                </p>
-                <input type="password" placeholder="Старий пароль">
-                <input type="password" placeholder="Новий пароль">
-                <a href="">
-                  Не пам’ятаю старий пароль
+            <div class="services__links">
+              <div class="services__links-block">
+                <a href="./services.html">
+                  Послуги
                 </a>
-                <p>
-                  Зміна основної пошти (Email)
-                </p>
-                <input type="email" placeholder="Поточна пошта">
-                <input type="email" placeholder="Нова пошта">
-                <p>
-                  Двохфакторна авторизація
-                </p>
-                <label>
-                  <input type="checkbox">
-                  Ввімкнути 2FA авторизацію
-                </label>
-                <a href="">
-                  Це посилить захист аккаунту
+                <a href="./services__group.html" class="active">
+                  Групи
                 </a>
               </div>
-              <button type="submit">
-                Зберегти зміни
-              </button>
-            </form>
+              <div class="services__links-block">
+                <a href="./services__edit.html">
+                  Додати послугу
+                </a>
+                <a href="./services__edit.html" class="active">
+                  Додати групу
+                </a>
+              </div>
+              
+            </div>
+            <div class="services__items">
+              <ul class="services__group-list">
+                <li>
+                  <p>
+                    Нігтьовий сервіс
+                  </p>
+                  <div>
+                    <input type="checkbox" checked>
+                    <a href="./services__edit-group.html">
+                      Редагувати
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <p>
+                    Брови та вії
+                  </p>
+                  <div>
+                    <input type="checkbox" checked>
+                    <a href="./services__edit-group.html">
+                      Редагувати
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <p>
+                    Мейк ап
+                  </p>
+                  <div>
+                    <input type="checkbox" checked>
+                    <a href="./services__edit-group.html">
+                      Редагувати
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -290,7 +250,7 @@
       <a href="./personal__account.html">
         <i class="fa-regular fa-user fa-xl"></i>
       </a>
-      <a href="#" class="with-news">
+      <a href="#" class="with-news current">
         <i class="fa-regular fa-rectangle-list fa-xl"></i>
       </a>
       <a href="./applications.html">
@@ -302,7 +262,7 @@
       <a href="./messages.html" class="with-news">
         <i class="fa-regular fa-comment fa-xl"></i>
       </a>
-      <a href="./settings.html" class="current">
+      <a href="./settings.html">
         <i class="fa-solid fa-gear fa-xl"></i>
       </a>
     </div>
