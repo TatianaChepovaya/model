@@ -171,7 +171,7 @@ header {
   background: #ffffff;
   z-index: 800;
   width: 100%;
-  padding: 70px 15px 25px 15px;
+  padding: 70px 15px;
   height: 100vh;
   position: fixed;
   overflow: hidden;
@@ -199,6 +199,19 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.header__list-social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__list-social li a i {
+  transform: scale(1.2);
+  color: var(--accent-color);
+  transition: all 0.4s;
+}
+.header__list-social li a:hover i {
+  color: var(--main-grey-color);
 }
 
 .header__line {
@@ -526,6 +539,19 @@ footer {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 45px;
+  gap: 15px;
+}
+.footer__list-social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__list-social li a i {
+  transform: scale(1.2);
+  transition: all 0.4s;
+}
+.footer__list-social li a:hover i {
+  color: var(--accent-color);
 }
 
 .footer__list-menu {
